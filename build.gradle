@@ -5,8 +5,8 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.74'
 }
 
-group = 'petrolpark.mc.library' // Your group ID
-version = '1.5.11-eligibbs'     // Your library version
+group = 'petrolpark.mc.destroy' // Your group ID
+version = '0.4.4-eligibbs'     // Your library version
 
 publishing {
     publications {
@@ -22,7 +22,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/eligibbs/Create-Library-Forked")
+            url = uri("https://maven.pkg.github.com/eligibbs/Destroy-Forked")
             credentials {
                 username = System.getenv("GITHUB_ACTOR") ?: findProperty("gpr.user")
                 password = System.getenv("GITHUB_TOKEN") ?: findProperty("gpr.key")
