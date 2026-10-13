@@ -5,7 +5,7 @@ import petrolpark.mc.destroy.core.pollution.PollutionConfigs;
 public class DestroyServerConfigs extends DestroyConfigBase {
 
     public final ConfigBool automaticGoggles = b(true, "automaticGoggles", "Players in Creative mode are treated as if they are wearing Engineer's Goggles even if they are not");
-    public final ConfigBool extendedInventorySafeMode = b(true, "extendedInventorySafeMode", "Only show extra inventory slots in menus which are known not to cause problems", "[Disabling will let extra slots show up in new menus]", "[If you disable this and try a new menu from another mod, then tell me whether it crashes or not at https://github.com/petrolpark/Destroy/issues/1]");
+    public final ConfigBool extendedInventorySafeMode = b(true, "extendedInventorySafeMode", "Only show extra inventory slots in menus which are known not to cause problems", "[Disabling will let extra slots show up in new menus]", "[If you disable this and try a new menu from another mod, then tell me whether it crashes or not at https://github.com/eligibbs/Destroy-Forked]");
 
     public final DestroyBlocksConfigs blocks = nested(0, DestroyBlocksConfigs::new, "Destroy's blocks");
     public final PollutionConfigs pollution = nested(0, PollutionConfigs::new, "The effects of pollution on the world");

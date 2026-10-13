@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Before submitting, ensure you are familiar with the [rules](https://github.com/petrolpark/Petrols-Parts/issues/1)**. Do not include this line in the suggestion.
+**Before submitting, ensure you are familiar with the [rules](https://github.com/eligibbs/Destroy-Forked)**. Do not include this line in the suggestion.
 
 **Description**
 

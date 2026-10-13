@@ -24,7 +24,8 @@ import petrolpark.mc.destroy.config.DestroyConfigs;
 public class DestroyForkWelcomeMessage {
 
     private static final String DISCORD_URL = "https://discord.com/invite/6EBJ3AzbHu";
-    private static final String GITHUB_URL = "https://github.com/NHblock714/Destroy/tree/1.21.1-neo";
+    private static final String ELIGIBBS_DISCORD_URL = "https://discord.gg/Nh64WXpbaj";
+    private static final String GITHUB_URL = "https://github.com/eligibbs/Destroy-Forked";
 
     @SubscribeEvent
     public static void onClientLoggingIn(ClientPlayerNetworkEvent.LoggingIn event) {
@@ -38,6 +39,7 @@ public class DestroyForkWelcomeMessage {
             .withStyle(ChatFormatting.GRAY));
         player.sendSystemMessage(Component.translatable("destroy.fork.welcome.links",
             buildLink("destroy.fork.welcome.discord", DISCORD_URL),
+            buildLink("destroy.fork.welcome.eligibbs-discord", ELIGIBBS_DISCORD_URL),
             buildLink("destroy.fork.welcome.github", GITHUB_URL))
             .withStyle(ChatFormatting.GRAY));
     }

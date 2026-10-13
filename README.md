@@ -3,7 +3,7 @@
 Unofficial community port of [Petrolpark/Destroy](https://github.com/Petrolpark-Mods/Destroy)
 from Forge 1.20.1 to NeoForge 1.21.1.
 
-> Authorised non-official port. Original mod by Petrolpark.
+> Authorized non-official port. Original mod by Petrolpark and originally forked by NHblock714, maintained by Eli Gibbs.
 
 ## Requirements
 
@@ -148,19 +148,13 @@ Tweaks to existing mechanics. Most are user-visible.
 ./gradlew jar
 ```
 
-Produces `build/libs/destroy-1.21.1-0.3.9.jar` (about 9 MB).
-
-> Build requires a local `_Migration-Toolkit-1.21/` directory as a sibling of
-> the project root, containing the petrolpark library Maven layout and the
-> compat-only jars referenced by `build.gradle`. End users who just want to
-> run the mod can install the jar directly into a NeoForge instance and do
-> not need the toolkit.
+Produces `build/libs/destroy-1.21.1-0.4.4-eligibbs.jar` (about 9 MB).
 
 ## Modpack usage
 
 You are welcome to include this fork in modpacks. Two requirements:
 
-1. **Credit the fork in the modpack description.** Include a link to this repository — `https://github.com/NHblock714/Destroy/tree/1.21.1-neo` — alongside the credit for the upstream Petrolpark mod. The wording is up to you; the intent is that anyone installing the pack can find this port if they hit a port-specific bug.
+1. **Credit the fork in the modpack description.** Include a link to this repository — `https://github.com/eligibbs/Create-Library-Forked` — alongside the credit for the upstream Petrolpark mod. The wording is up to you; the intent is that anyone installing the pack can find this port if they hit a port-specific bug.
 2. **Do not redistribute the jar as if it were the original 1.20.1 Destroy.** This is an unofficial port; bugs introduced by the port should not be reported to Petrolpark.
 
 Beyond that there are no extra rules — no payment, no permission request, no name-change required. Just keep the link visible so testers know where to file issues.
@@ -196,5 +190,5 @@ of Petrolpark.
 
 ---
 
-**Maintainer**: [NHblock714](https://github.com/NHblock714)  
+**Maintainer**: [Eli Gibbs](https://www.curseforge.com/members/eligibbs)  
 **Upstream**: [Petrolpark-Mods/Destroy](https://github.com/Petrolpark-Mods/Destroy)
