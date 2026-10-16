@@ -1,6 +1,6 @@
 {
   "destroy.fork.welcome.header": "[Destroy · 非公式1.21.1移植版]",
-  "destroy.fork.welcome.body": "これはPetrolparkによる「Destroy」のコミュニティフォーク版です。オリジナル版はForge 1.20.1を対象としていますが、本ビルドはNHblock氏によって保守されている、公認済みですが非公式の移植版です。",
+  "destroy.fork.welcome.body": "これはPetrolparkによる「Destroy」のコミュニティフォーク版です。オリジナル版はForge 1.20.1を対象としていますが、本ビルドはNHblock氏によってフォークされEli Gibbs氏が保守している、公認済みですが非公式の移植版です。",
   "destroy.fork.welcome.links": "バグ報告やヘルプはこちらから: %s  ·  %s",
   "destroy.fork.welcome.discord": "Petrolpark Discord",
   "destroy.fork.welcome.github": "GitHub上のフォークリポジトリ",
