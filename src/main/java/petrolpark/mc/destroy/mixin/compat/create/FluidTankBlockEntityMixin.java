@@ -1,7 +1,7 @@
 package petrolpark.mc.destroy.mixin.compat.create;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -66,9 +66,29 @@ import petrolpark.mc.destroy.core.fluid.GeniusFluidTankBehaviour.GeniusFluidTank
 @Mixin(FluidTankBlockEntity.class)
 public abstract class FluidTankBlockEntityMixin {
 
-    @Overwrite(remap = false)
-    protected SmartFluidTank createInventory() {
-        return new GeniusFluidTank(FluidTankBlockEntity.getCapacityMultiplier(), this::invokeOnFluidStackChanged);
+    /**
+     * Wraps the returned SmartFluidTank (including any anonymous subclass created by
+     * Gadgets & Gizmos' @Redirect) into a GeniusFluidTank, while preserving any
+     * fluid restrictions applied to the original tank.
+     */
+    @ModifyReturnValue(method = "createInventory", at = @At("RETURN"), remap = false)
+    private SmartFluidTank destroy$replaceWithGeniusFluidTank(SmartFluidTank original) {
+        return new GeniusFluidTank(FluidTankBlockEntity.getCapacityMultiplier(), this::invokeOnFluidStackChanged) {
+            @Override
+            public boolean isFluidValid(FluidStack stack) {
+                // Enforce both Gadgets & Gizmos' restriction and Destroy's validation
+                return original.isFluidValid(stack) && super.isFluidValid(stack);
+            }
+
+            @Override
+            public int fill(FluidStack resource, FluidAction action) {
+                // If Gadgets & Gizmos blocks the fluid inside fill() or via validator, respect it
+                if (!original.isFluidValid(resource)) {
+                    return 0;
+                }
+                return super.fill(resource, action);
+            }
+        };
     }
 
     @Invoker(value = "onFluidStackChanged", remap = false)

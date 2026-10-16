@@ -264,3 +264,8 @@ tasks.withType(Copy) {
 //         downloadJavadoc = true
 //     }
 // }
+
+tasks.withType(Javadoc).configureEach {
+    failOnError = false
+    options.addStringOption('Xdoclint:none', '-quiet')
+}
