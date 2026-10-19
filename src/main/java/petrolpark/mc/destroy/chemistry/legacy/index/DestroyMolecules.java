@@ -529,6 +529,14 @@ public final class DestroyMolecules {
         .id("ethoxide")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:CCO^-1"))
         .build(),
+
+    FORMIC_ACID = builder()
+            .id("formic_acid")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:C(=O)OH"))
+            .boilingPoint(100.8f)
+            .density(1220f)
+            .molarHeatCapacity(82.8f)
+            .build(),
     
     FLUORIDE = builder()
         .id("fluoride")

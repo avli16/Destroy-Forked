@@ -7,6 +7,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlcoholDehyd
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlcoholOxidation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AldehydeOxidation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkoxideProtonation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkyneHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AmideHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AminePhosgenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BoraneElectrophilicHydroboration;
@@ -57,7 +58,7 @@ public class DestroyGenericReactions {
     public static final AlkoxideProtonation ALKOXIDE_PROTONATION = new AlkoxideProtonation();
     public static final ElectrophilicChlorination ALKYNE_CHLORINATION = new ElectrophilicChlorination(true);
     public static final ElectrophilicChlorohydrination ALKYNE_CHLOROHYDRINATION = new ElectrophilicChlorohydrination(true);
-    public static final SaturatedCarbonHydrolysis ALKYNE_HYDROLYSIS = new SaturatedCarbonHydrolysis(true);
+    public static final AlkyneHydrolysis ALKYNE_HYDROLYSIS = new AlkyneHydrolysis();
    // public static final ElectrophilicHydroboration ALKYNE_HYDROBORATION = new ElectrophilicHydroboration(true);
     public static final BoraneElectrophilicHydroboration ALKYNE_HYDROBORATION_WITH_BORANE = new BoraneElectrophilicHydroboration(true);
     public static final ElectrophilicHydrochlorination ALKYNE_HYDROCHLORINATION = new ElectrophilicHydrochlorination(true);

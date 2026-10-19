@@ -13,5 +13,6 @@ Thanks @flynnvali for these:
 - Toluene chlorination
 - Sulfur dioxide refrigerant
 - Chalk dissolution reaction
+- Alkyne hydration
 
 Besides that, I want to keep this fork in sync with Eligibbs' fork.
