@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'petrolpark.mc.destroy' // Your group ID
-version = '0.4.4-eligibbs'     // Your library version
+version = '0.4.5-avli'     // Your library version
 
 publishing {
     publications {
@@ -140,15 +140,6 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/eligibbs/Create-Library-Forked")
-        credentials {
-            // Pulls from environment variables first, falls back to gradle.properties
-            username = System.getenv("GITHUB_ACTOR") ?: findProperty("gpr.user")
-            password = System.getenv("GITHUB_TOKEN") ?: findProperty("gpr.key")
-        }
-    }
     exclusiveContent { // Sable Companion
         forRepository {
             maven { url = "https://maven.ryanhcode.dev/releases" }
@@ -160,6 +151,9 @@ repositories {
     maven {
         name = "Sleeping Town"
         url = "https://repo.sleeping.town/"
+    }
+    flatDir {
+        dir 'libs'
     }
 }
 
@@ -174,7 +168,7 @@ dependencies {
 
     // Create & Ponder
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}") { transitive = false }
-    implementation("net.createmod.ponder:Ponder-NeoForge-${minecraft_version}:${ponder_version}")
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
 
