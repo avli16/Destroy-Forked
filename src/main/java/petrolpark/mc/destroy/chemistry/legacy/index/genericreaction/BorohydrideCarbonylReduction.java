@@ -1,7 +1,6 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import petrolpark.mc.destroy.Destroy;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
@@ -17,38 +16,31 @@ public class BorohydrideCarbonylReduction extends SingleGroupGenericReaction<Car
 
     public BorohydrideCarbonylReduction() {
         super(Destroy.asResource("borohydride_carbonyl_reduction"), DestroyGroupTypes.CARBONYL);
-    };
+    }
 
     @Override
     public boolean isPossibleIn(ReadOnlyMixture mixture) {
         return mixture.getConcentrationOf(DestroyMolecules.BOROHYDRIDE) > 0f;
-    };
+    }
 
     @Override
     public LegacyReaction generateReaction(GenericReactant<CarbonylGroup> reactant) {
         CarbonylGroup carbonyl = reactant.getGroup();
 
-        LegacyMolecularStructure alkoxideStructure = reactant.getMolecule().shallowCopyStructure();
-        alkoxideStructure.moveTo(carbonyl.carbon)
-            .addAtom(LegacyElement.HYDROGEN)
-            .replaceBondTo(carbonyl.oxygen, BondType.SINGLE)
-            .remove(carbonyl.oxygen)
-            .addAtom(new LegacyAtom(LegacyElement.OXYGEN, -1d));
-
-        LegacyMolecularStructure borateEsterStructure = reactant.getMolecule().shallowCopyStructure();
-        borateEsterStructure.moveTo(carbonyl.carbon)
-            .addAtom(LegacyElement.HYDROGEN)
-            .replaceBondTo(carbonyl.oxygen, BondType.SINGLE)
-            .moveTo(carbonyl.oxygen)
-            .addGroup(LegacyMolecularStructure.borane());
+        LegacyMolecularStructure structure = reactant.getMolecule().shallowCopyStructure();
+        structure.moveTo(carbonyl.carbon)
+                .addAtom(LegacyElement.HYDROGEN)
+                .replaceBondTo(carbonyl.oxygen, BondType.SINGLE)
+                .remove(carbonyl.oxygen)
+                .addGroup(LegacyMolecularStructure.alcohol());
 
         return reactionBuilder()
-            .addReactant(reactant.getMolecule(), 2)
-            .addReactant(DestroyMolecules.BOROHYDRIDE)
-            .addProduct(moleculeBuilder().structure(alkoxideStructure).build())
-            .addProduct(moleculeBuilder().structure(borateEsterStructure).build())
-            .activationEnergy(50f)
-            .build();
-    };
-    
-};
+                .addReactant(reactant.getMolecule(), 4)
+                .addReactant(DestroyMolecules.WATER, 4) // workup
+                .addReactant(DestroyMolecules.BOROHYDRIDE)
+                .addProduct(moleculeBuilder().structure(structure).build(), 4)
+                .addProduct(DestroyMolecules.TETRAHYDROXYBORATE)
+                .activationEnergy(50f)
+                .build();
+    }
+}
