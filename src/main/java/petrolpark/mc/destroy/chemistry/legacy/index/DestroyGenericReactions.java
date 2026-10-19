@@ -9,16 +9,14 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AldehydeOxid
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkoxideProtonation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AmideHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AminePhosgenation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BoraneElectrophilicHydroboration;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BoraneOxidation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BorateEsterHydrolysis;
-import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BorateEsterification;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAcidEsterification;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanamideAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanideNucleophilicAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorohydrination;
-import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicHydroboration;
-import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BoraneElectrophilicHydroboration;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicHydrochlorination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicHydroiodination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicIodination;
@@ -30,10 +28,12 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.IsocyanateHy
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitrileHydrogenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitrileHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitroHydrogenation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitroReductionToOxime;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.OximeFormation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.SaturatedCarbonHydrogenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.SaturatedCarbonHydrolysis;
-import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.WolffKishnerReduction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ThionylChlorideSubstitution;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.WolffKishnerReduction;
 
 public class DestroyGenericReactions {
 
@@ -80,6 +80,8 @@ public class DestroyGenericReactions {
     public static final NitrileHydrogenation NITRILE_HYDROGENATION = new NitrileHydrogenation();
     public static final NitrileHydrolysis NITRILE_HYDROLYSIS = new NitrileHydrolysis();
     public static final NitroHydrogenation NITRO_HYDROGENATION = new NitroHydrogenation();
+    public static final NitroReductionToOxime NITRO_REDUCTION_TO_OXIME = new NitroReductionToOxime();
+    public static final OximeFormation OXIME_FORMATION = new OximeFormation();
     public static final ThionylChlorideSubstitution THIONYL_CHLORIDE_SUBSTITUTION = new ThionylChlorideSubstitution();
     public static final WolffKishnerReduction WOLFF_KISHNER_REDUCTION = new WolffKishnerReduction();
 
