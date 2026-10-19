@@ -24,7 +24,7 @@ public class OximeGroup extends LegacyFunctionalGroup<OximeGroup> {
     };
 
     @Override
-    public LegacyFunctionalGroupType<? extends OximeGroup> getType() {
+    public LegacyFunctionalGroupType<OximeGroup> getType() {
         return DestroyGroupTypes.OXIME;
     };
 };

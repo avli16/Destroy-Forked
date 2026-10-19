@@ -1,16 +1,36 @@
 package petrolpark.mc.destroy.chemistry.legacy.index;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import petrolpark.mc.destroy.chemistry.legacy.GroupFinder;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.*;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AcidAnhydrideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AcylChlorideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AlcoholGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkeneGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkoxideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkyneGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.BoraneGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.BorateEsterGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.BoricAcidGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.CarbonylGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.CarboxylicAcidGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.EsterGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.HalideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.IsocyanateGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.NitrileGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.NitroGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryAmineGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryBoraneGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.OximeGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.PrimaryAmineGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.UnsubstitutedAmideGroup;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class DestroyGroupFinder extends GroupFinder {
 
@@ -61,7 +81,7 @@ public class DestroyGroupFinder extends GroupFinder {
 
                             boolean isKetoxime = hydrogens.isEmpty() && carbons.size() == 2;
 
-                            if (carbons.size() + hydrogens.size() == 2) {
+                            if (carbons.size() + hydrogens.size() + rGroups.size() == 2) {
                                 groups.add(new OximeGroup(
                                         carbon,
                                         nitrogen,

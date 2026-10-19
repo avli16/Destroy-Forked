@@ -2,6 +2,8 @@
 - Oximes
   - Hydroxylamine/hydroxylammonium
   - Oxime formation (probably should be named Hydroxylamine condensation?)
+  - Oxime hydrogenation
+  - Oxime hydrolysis
   - Nitro group reduction to oxime
 - Chromium (II)
 - Cyclohexane topology

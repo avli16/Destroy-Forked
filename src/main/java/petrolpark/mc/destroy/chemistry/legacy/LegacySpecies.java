@@ -662,7 +662,8 @@ public class LegacySpecies implements INameableProduct {
                 if (type == DestroyGroupTypes.ALCOHOL
                     || type == DestroyGroupTypes.NON_TERTIARY_AMINE
                     || type == DestroyGroupTypes.CARBOXYLIC_ACID
-                    || type == DestroyGroupTypes.UNSUBSTITUTED_AMIDE) hydrogenBondingGroups++;
+                    || type == DestroyGroupTypes.UNSUBSTITUTED_AMIDE
+                    || type == DestroyGroupTypes.OXIME) hydrogenBondingGroups++;
                 if (type == DestroyGroupTypes.CARBONYL
                     || type == DestroyGroupTypes.CARBOXYLIC_ACID
                     || type == DestroyGroupTypes.UNSUBSTITUTED_AMIDE) carbonyls++;
@@ -679,7 +680,7 @@ public class LegacySpecies implements INameableProduct {
 
         /** Very loosely estimate the dipole moment of a molecule.*/
         private static int estimateDipoleMoment(LegacySpecies molecule) {
-            return 0;
+            return 0; // TODO estimation
         }
 
         public class MoleculeConstructionException extends ChemistryException {

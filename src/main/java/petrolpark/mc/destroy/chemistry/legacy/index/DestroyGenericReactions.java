@@ -30,6 +30,8 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitrileHydro
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitroHydrogenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitroReductionToOxime;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.OximeFormation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.OximeHydrogenation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.OximeHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.SaturatedCarbonHydrogenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.SaturatedCarbonHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ThionylChlorideSubstitution;
@@ -82,6 +84,8 @@ public class DestroyGenericReactions {
     public static final NitroHydrogenation NITRO_HYDROGENATION = new NitroHydrogenation();
     public static final NitroReductionToOxime NITRO_REDUCTION_TO_OXIME = new NitroReductionToOxime();
     public static final OximeFormation OXIME_FORMATION = new OximeFormation();
+    public static final OximeHydrogenation OXIME_HYDROGENATION = new OximeHydrogenation();
+    public static final OximeHydrolysis OXIME_HYDROLYSIS = new OximeHydrolysis();
     public static final ThionylChlorideSubstitution THIONYL_CHLORIDE_SUBSTITUTION = new ThionylChlorideSubstitution();
     public static final WolffKishnerReduction WOLFF_KISHNER_REDUCTION = new WolffKishnerReduction();
 

@@ -1,5 +1,6 @@
 package petrolpark.mc.destroy.chemistry.legacy.index;
 
+import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroup;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroupType;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.AcidAnhydrideGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.AcylChlorideGroup;
@@ -21,6 +22,8 @@ import petrolpark.mc.destroy.chemistry.legacy.index.group.OximeGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.PrimaryAmineGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.SaturatedCarbonGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.UnsubstitutedAmideGroup;
+
+import java.util.HashSet;
 
 public class DestroyGroupTypes {
     
@@ -45,4 +48,8 @@ public class DestroyGroupTypes {
     public static final LegacyFunctionalGroupType<OximeGroup> OXIME = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_OXIME);
     public static final LegacyFunctionalGroupType<PrimaryAmineGroup> PRIMARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_AMINE);
     public static final LegacyFunctionalGroupType<UnsubstitutedAmideGroup> UNSUBSTITUTED_AMIDE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_AMIDE);
+
+    static { // sorry...
+        LegacyFunctionalGroup.groupTypesAndReactions.putIfAbsent(OXIME, new HashSet<>());
+    }
 };
