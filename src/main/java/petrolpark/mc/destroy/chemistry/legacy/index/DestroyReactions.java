@@ -198,8 +198,8 @@ public class DestroyReactions {
         .id("carbon_capture")
         .addReactant(DestroyMolecules.CALCIUM_ION)
         .addReactant(DestroyMolecules.CARBON_DIOXIDE)
-        .addReactant(DestroyMolecules.WATER)
-        .addProduct(DestroyMolecules.PROTON, 2)
+        .addReactant(DestroyMolecules.HYDROXIDE, 2  )
+        .addProduct(DestroyMolecules.WATER)
         .withResult(2f, PrecipitateReactionResult.of(DestroyItems.CHALK_DUST::asStack))
         .build(),
 
@@ -517,13 +517,16 @@ public class DestroyReactions {
         .build(),
 
     HABER_PROCESS = builder()
-        .id("haber_process")
-        .addReactant(DestroyMolecules.NITROGEN)
-        .addReactant(DestroyMolecules.HYDROGEN, 3, 0)
-        .addSimpleItemTagCatalyst(PetrolparkTags.commonItemTag("dusts/iron"), 1f)
-        .addProduct(DestroyMolecules.AMMONIA, 2)
-        .withResult(0f, DestroyAdvancementTrigger.HABER_PROCESS::asReactionResult)
-        .build(), // TODO add reversibility and appropriate rate constants
+            .id("haber_process")
+            .addReactant(DestroyMolecules.NITROGEN)
+            .addReactant(DestroyMolecules.HYDROGEN, 3, 0)
+            .addSimpleItemTagCatalyst(PetrolparkTags.commonItemTag("dusts/iron"), 1f)
+            .addProduct(DestroyMolecules.AMMONIA, 2)
+            // .reverseReaction(reaction -> reaction
+            //    .
+            // ) TODO add reversibility and appropriate rate constants
+            .withResult(0f, DestroyAdvancementTrigger.HABER_PROCESS::asReactionResult)
+            .build(),
     // TODO add oxidation of nitrogen in air so this is more difficult
         
     HYDROGEN_CHLORIDE_SYNTHESIS = builder()

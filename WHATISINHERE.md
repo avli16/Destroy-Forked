@@ -13,6 +13,7 @@ Thanks @flynnvali for these:
 - Toluene chlorination
 - Sulfur dioxide refrigerant
 - Chalk dissolution reaction
+- Carbon capture requires hydroxide
 - Fix borohydride carbonyl reduction
 - Alkyne hydration
 
