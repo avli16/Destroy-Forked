@@ -536,6 +536,8 @@ public final class DestroyMolecules {
             .boilingPoint(100.8f)
             .density(1220f)
             .molarHeatCapacity(82.8f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.SMELLY)
             .build(),
     
     FLUORIDE = builder()
