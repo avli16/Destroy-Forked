@@ -425,6 +425,8 @@
     "destroy.chemical.fatty_acids": "Fatty Acids",
     "destroy.chemical.ferric": "Ferric",
     "destroy.chemical.ferrous": "Ferrous",
+    "destroy.chemical.formic_acid": "Formic Acid",
+    "destroy.chemical.formic_acid.iupac": "Methanoic Acid",
     "destroy.chemical.fluoride": "Fluoride",
     "destroy.chemical.glycerol": "Glycerol",
     "destroy.chemical.glycerol.iupac": "Propane-1,2,3-triol",
