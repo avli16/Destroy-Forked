@@ -84,6 +84,37 @@ public class DestroyTopologies {
         // TODO reflections
         .build("cubane"),
 
+    CYCLOHEXANE = create(LegacyElement.CARBON)
+            .sideChain(new Vec3(-sin(30), -cos(30), 0), new Vec3(-sin(30), -cos(30), 0), BondType.SINGLE)
+            .sideChain(new Vec3(-sin(30), -cos(30), 0.5d).normalize(), new Vec3(-sin(30), -cos(30), 0.5d).normalize(), BondType.SINGLE)
+            .atom(LegacyElement.CARBON, new Vec3(-sin(30), cos(30), 0))
+                .withBondTo(0, BondType.SINGLE)
+                .withSideBranch(new Vec3(-0.75d, 0, 0.5d).normalize(), new Vec3(-0.75d, 0, 0.5d).normalize(), BondType.SINGLE)
+                .withSideBranch(new Vec3(-0.75d, 0, -.5d).normalize(), new Vec3(-0.75d, 0, -0.5d).normalize(), BondType.SINGLE)
+                .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0, 2 * cos(30) - 0.1d, -0.2d))
+                .withBondTo(1, BondType.SINGLE)
+                .withSideBranch(new Vec3(-cos(30), sin(30), 0.1).normalize(), new Vec3(-cos(30), sin(30), 0.1).normalize(), BondType.SINGLE)
+                .withSideBranch(new Vec3(0.1d, 0, -1).normalize(), new Vec3(0.1d, 0, -1).normalize(), BondType.SINGLE)
+                .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.8d, 2 * cos(30) - 0.1d, 0.2d))
+                .withBondTo(2, BondType.SINGLE)
+                .withSideBranch(new Vec3(cos(30), sin(30), -0.1).normalize(), new Vec3(cos(30), sin(30), -0.1).normalize(), BondType.SINGLE)
+                .withSideBranch(new Vec3(-0.1d, 0, 1).normalize(), new Vec3(-0.1d, 0, 1).normalize(), BondType.SINGLE)
+                .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.8d + sin(30), cos(30), 0))
+                .withBondTo(3, BondType.SINGLE)
+                .withSideBranch(new Vec3(0.75d, 0, 0.5d).normalize(), new Vec3(0.75d, 0, 0.5d).normalize(), BondType.SINGLE)
+                .withSideBranch(new Vec3(0.75d, 0, -.5d).normalize(), new Vec3(0.75d, 0, -0.5d).normalize(), BondType.SINGLE)
+                .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.8d, 0d, 0d))
+                .withBondTo(4, BondType.SINGLE)
+                .withBondTo(0, BondType.SINGLE)
+                .withSideBranch(new Vec3(sin(30), -cos(30), 0d), new Vec3(sin(30), -cos(30), 0d), BondType.SINGLE)
+                .withSideBranch(new Vec3(sin(30), -cos(30), 0.5d).normalize(), new Vec3(sin(30), -cos(30), 0.5d).normalize(), BondType.SINGLE)
+                .attach()
+            .build("cyclohexane"),
+
     CYCLOHEXENE = create(LegacyElement.CARBON) // 0
         .sideChain(new Vec3(-sin(30), -cos(30), 0), new Vec3(-sin(30), -cos(30), 0), BondType.SINGLE)
         .atom(LegacyElement.CARBON, new Vec3(-sin(30), cos(30), 0)) // 1

@@ -228,6 +228,15 @@ public class DestroyReactions {
         .withResult(2f, PrecipitateReactionResult.of(DestroyItems.NITROCELLULOSE::asStack))
         .build(),
 
+    CHALK_DISSOLUTION = builder()
+        .id("chalk_dissolution")
+        .addSimpleItemReactant(DestroyItems.CHALK_DUST, 2f)
+        .addReactant(DestroyMolecules.PROTON, 2)
+        .addProduct(DestroyMolecules.CARBON_DIOXIDE)
+        .addProduct(DestroyMolecules.CALCIUM_ION)
+        .addCatalyst(DestroyMolecules.WATER, 2)
+        .build(),
+
     CHLORINE_HALOFORM_REACTION = builder()
         .id("chlorine_haloform_reaction")
         .addReactant(DestroyMolecules.HYPOCHLORITE, 3, 0)
@@ -303,6 +312,16 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.CHROMATE, 2)
         .addProduct(DestroyMolecules.WATER, 8)
         .build(),
+
+    CHROMIUM_III_REDUCTION_WITH_ZINC = builder() // TODO replace with redox
+            .id("chromium_iii_reduction_with_zinc")
+            .addReactant(DestroyMolecules.CHROMIUM_III, 2)
+            .addSimpleItemTagReactant(PetrolparkTags.commonItemTag("dusts/zinc"), 1f)
+            .addCatalyst(DestroyMolecules.PROTON, 1)
+            .addProduct(DestroyMolecules.CHROMIUM_II, 2)
+            .addProduct(DestroyMolecules.ZINC_ION)
+            // TODO kinetics and thermodynamics
+            .build(),
 
     CISPLATIN_SYNTHESIS = builder()
         .id("cisplatin_synthesis")
@@ -1140,6 +1159,7 @@ public class DestroyReactions {
         builder().acid(DestroyMolecules.HYDROGEN_CYANIDE, DestroyMolecules.CYANIDE, 9.2f);
         builder().acid(DestroyMolecules.HYDROGEN_IODIDE, DestroyMolecules.IODIDE, -9.3f);
         builder().acid(DestroyMolecules.HYDROGENSULFATE, DestroyMolecules.SULFATE, 1.99f);
+        builder().acid(DestroyMolecules.HYDROXYLAMMONIUM, DestroyMolecules.HYDROXYLAMINE, 5.94f);
         builder().acid(DestroyMolecules.HYPOCHLOROUS_ACID, DestroyMolecules.HYPOCHLORITE, 7.53f);
         builder().acid(DestroyMolecules.NITRIC_ACID, DestroyMolecules.NITRATE, -1.3f);
         builder().acid(DestroyMolecules.SULFURIC_ACID, DestroyMolecules.HYDROGENSULFATE, -2.18f);

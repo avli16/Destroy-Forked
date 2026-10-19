@@ -1,25 +1,7 @@
 package petrolpark.mc.destroy.chemistry.legacy.index;
 
 import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroupType;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AcidAnhydrideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AcylChlorideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlcoholGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkoxideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BoraneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BorateEsterGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BoricAcidGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.CarbonylGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.CarboxylicAcidGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.EsterGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.HalideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.IsocyanateGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NitrileGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NitroGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryAmineGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryBoraneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.PrimaryAmineGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.SaturatedCarbonGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.UnsubstitutedAmideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.*;
 
 public class DestroyGroupTypes {
     
@@ -41,6 +23,7 @@ public class DestroyGroupTypes {
     public static final LegacyFunctionalGroupType<NitroGroup> NITRO = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_NITRO);
     public static final LegacyFunctionalGroupType<NonTertiaryAmineGroup> NON_TERTIARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_AMINE);
     public static final LegacyFunctionalGroupType<NonTertiaryBoraneGroup> NON_TERTIARY_BORANE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_BORANE);
+    public static final LegacyFunctionalGroupType<OximeGroup> OXIME = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_OXIME);
     public static final LegacyFunctionalGroupType<PrimaryAmineGroup> PRIMARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_AMINE);
     public static final LegacyFunctionalGroupType<UnsubstitutedAmideGroup> UNSUBSTITUTED_AMIDE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_AMIDE);
 };

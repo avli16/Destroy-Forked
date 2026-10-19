@@ -10,26 +10,7 @@ import petrolpark.mc.destroy.chemistry.legacy.LegacyBond;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AcidAnhydrideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AcylChlorideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlcoholGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkeneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkoxideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.AlkyneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BoraneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BorateEsterGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.BoricAcidGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.CarbonylGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.CarboxylicAcidGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.EsterGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.HalideGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.IsocyanateGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NitrileGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NitroGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryAmineGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.NonTertiaryBoraneGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.PrimaryAmineGroup;
-import petrolpark.mc.destroy.chemistry.legacy.index.group.UnsubstitutedAmideGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.*;
 
 public class DestroyGroupFinder extends GroupFinder {
 
@@ -62,6 +43,36 @@ public class DestroyGroupFinder extends GroupFinder {
                 List<LegacyAtom> doubleBondedNitrogens = bondedAtomsOfElementTo(structure, carbon, LegacyElement.NITROGEN, BondType.DOUBLE);
                 List<LegacyAtom> nitrileNitrogens = bondedAtomsOfElementTo(structure, carbon, LegacyElement.NITROGEN, BondType.TRIPLE);
                 List<LegacyAtom> rGroups = bondedAtomsOfElementTo(structure, carbon, LegacyElement.R_GROUP);
+
+                if (doubleBondedNitrogens.size() == 1) { // Oximes (C=N-OH) and imines later on
+                    LegacyAtom nitrogen = doubleBondedNitrogens.get(0);
+
+                    List<LegacyAtom> oximeOxygens =
+                            bondedAtomsOfElementTo(structure, nitrogen, LegacyElement.OXYGEN, BondType.SINGLE);
+
+                    if (oximeOxygens.size() == 1) {
+                        LegacyAtom oxygen = oximeOxygens.get(0);
+
+                        List<LegacyAtom> oximeHydrogens =
+                                bondedAtomsOfElementTo(structure, oxygen, LegacyElement.HYDROGEN, BondType.SINGLE);
+
+                        if (oximeHydrogens.size() == 1) {
+                            LegacyAtom hydrogen = oximeHydrogens.get(0);
+
+                            boolean isKetoxime = hydrogens.isEmpty() && carbons.size() == 2;
+
+                            if (carbons.size() + hydrogens.size() == 2) {
+                                groups.add(new OximeGroup(
+                                        carbon,
+                                        nitrogen,
+                                        oxygen,
+                                        hydrogen,
+                                        isKetoxime
+                                ));
+                            }
+                        }
+                    }
+                }
 
                 if (carbonylOxygens.size() == 1) { // Ketones, aldehydes, esters, acids, acid anhydrides, acyl chlorides, amides
                     LegacyAtom carbonylOxygen = carbonylOxygens.get(0);

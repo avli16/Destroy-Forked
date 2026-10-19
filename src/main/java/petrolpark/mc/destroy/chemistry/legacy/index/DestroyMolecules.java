@@ -317,6 +317,12 @@ public final class DestroyMolecules {
         .color(0xD0F7ED2C)
         .build(),
 
+    CHROMIUM_II = builder()
+        .id("chromium_ii")
+        .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 2))
+        .color(0xC00C8610)
+        .build(),
+
     CHROMIUM_III = builder()
         .id("chromium_iii")
         .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 3))
@@ -414,10 +420,9 @@ public final class DestroyMolecules {
         .build(),
 
     // TODO cyclopentadiene
-
     // CYCLOPENTADIENIDE = builder()
     // .id("cyclopentadienide")
-    // .structure(Formula.deserialize("destroy:cyclopentadienide:,,,,"))
+    // .structure(LegacyMolecularStructure.deserialize("destroy:cyclopentadienide:,,,,"))
     // .charge(-1)
     // .tag(Tags.SMOG)
     // .build(),
@@ -656,6 +661,13 @@ public final class DestroyMolecules {
         .translationKey("organic_boric_acid")
         .build(),
 
+    GENERIC_OXIME = builder()
+            .id("generic_oxime")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:RC(=NOH)R"))
+            .hypothetical()
+            .translationKey("oxime")
+            .build(),
+
     GENERIC_PRIMARY_AMINE = builder()
         .id("generic_primary_amine")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:RC(R)(R)N"))
@@ -777,6 +789,16 @@ public final class DestroyMolecules {
         .structure(LegacyMolecularStructure.atom(LegacyElement.HYDROGEN).addAtom(new LegacyAtom(LegacyElement.OXYGEN, -1)))
         .density(900f) // Not accurate but allows separation of mercury and sodium hydroxide solution by Centrifugation
         .build(),
+
+    HYDROXYLAMINE = builder()
+            .id("hydroxylamine")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:HN(OH)H"))
+            .build(),
+
+    HYDROXYLAMMONIUM = builder()
+            .id("hydroxylammonium")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:HN^+1(OH)(H)H"))
+            .build(),
 
     HYPOCHLOROUS_ACID = builder()
         .id("hypochlorous_acid")
@@ -1196,6 +1218,7 @@ public final class DestroyMolecules {
         .density(2628.8f)
         .molarHeatCapacity(39.87f)
         .tag(Tags.ACUTELY_TOXIC)
+        .tag(Tags.REFRIGERANT)
         .tag(Tags.ACID_RAIN)
         .build(),
 
