@@ -1006,12 +1006,22 @@ public class DestroyReactions {
         .build(),
 
     THIONYL_CHLORIDE_SYNTHESIS = builder()
-            .id("thionyl_chloride_synthesis")
-            .addReactant(DestroyMolecules.SULFUR_DIOXIDE)
-            .addReactant(DestroyMolecules.PHOSGENE)
-            .addProduct(DestroyMolecules.THIONYL_CHLORIDE)
-            .addProduct(DestroyMolecules.CARBON_DIOXIDE)
-            .build(),
+        .id("thionyl_chloride_synthesis")
+        .addReactant(DestroyMolecules.SULFUR_DIOXIDE)
+        .addReactant(DestroyMolecules.PHOSGENE)
+        .addProduct(DestroyMolecules.THIONYL_CHLORIDE)
+        .addProduct(DestroyMolecules.CARBON_DIOXIDE)
+        .build(),
+
+    TOLUENE_CHLORINATION = builder()
+        .id("toluene_chlorination")
+        .addReactant(DestroyMolecules.TOLUENE)
+        .addReactant(DestroyMolecules.CHLORINE)
+        .addProduct(DestroyMolecules.BENZYL_CHLORIDE)
+        .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+        // TODO kinetics
+        .requireUV()
+        .build(),
 
     TOLUENE_NITRATION = builder()
         .id("toluene_nitration")

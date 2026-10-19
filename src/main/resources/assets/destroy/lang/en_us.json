@@ -1162,6 +1162,8 @@
     "destroy.reaction.diborane_hydrolysis.description": "The {hydrolysis, destroy:hydrolysis} of [destroy:diborane] to produce [destroy:boric_acid].",
     "destroy.reaction.dichloromethane_uv_chlorination": "[destroy:dichloromethane] Chlorination",
     "destroy.reaction.dichloromethane_uv_chlorination.description": "Will react further to make [destroy:carbon_tetrachloride].",
+    "destroy.reaction.toluene_chlorination": "[destroy:toluene] Chlorination",
+    "destroy.reaction.toluene_chlorination.description": "[destroy:ultraviolet_catalysed_reaction] {addition, destroy:addition} of [destroy:chlorine] to [destroy:toluene] to form [destroy:benzyl_chloride].",
     "destroy.reaction.dinitrotoluene_nitration": "[destroy:dinitrotoluene] Nitration",
     "destroy.reaction.dinitrotoluene_nitration.description": "A method for the production of [destroy:tnt]. Best to start with [destroy:toluene] and do all nitrations at once.",
     "destroy.reaction.ethene_polymerization": "[destroy:ethene] Polymerization",

@@ -1,2 +1,3 @@
 - Updated dependencies
-- Corrected the Brown Schlesinger process 
+- Corrected the Brown Schlesinger process
+- Toluene chlorination
