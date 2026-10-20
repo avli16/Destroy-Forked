@@ -1,7 +1,6 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import petrolpark.mc.destroy.Destroy;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
@@ -26,12 +25,11 @@ public class OximeFormation extends SingleGroupGenericReaction<CarbonylGroup> {
 
     public LegacyReaction generateReaction(GenericReactant<CarbonylGroup> reactant) {
         LegacyMolecularStructure structure = reactant.molecule.shallowCopyStructure();
-        LegacyAtom newNitrogen = new LegacyAtom(LegacyElement.NITROGEN);
         structure.moveTo(reactant.group.carbon)
                 .remove(reactant.group.oxygen)
-                .addAtom(newNitrogen, LegacyBond.BondType.DOUBLE)
-                .moveTo(newNitrogen)
-                .addGroup(LegacyMolecularStructure.alcohol());
+                .addGroup(LegacyMolecularStructure.atom(LegacyElement.NITROGEN)
+                                .addGroup(LegacyMolecularStructure.alcohol()),
+                        true, LegacyBond.BondType.DOUBLE);
 
         if (reactant.molecule.isHypothetical())
             structure.addAllHydrogens();

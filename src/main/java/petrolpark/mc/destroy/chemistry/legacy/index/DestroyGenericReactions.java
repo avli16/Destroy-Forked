@@ -15,6 +15,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BoraneOxidat
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BorateEsterHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.BorohydrideCarbonylReduction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAcidEsterification;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAcidReduction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanamideAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanideNucleophilicAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorination;
@@ -27,6 +28,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.HalideAmmoni
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.HalideCyanideSubstitution;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.HalideHydroxideSubstitution;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.IsocyanateHydrolysis;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.LeuckartReaction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitrileHydrogenation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitrileHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.NitroHydrogenation;
@@ -72,7 +74,7 @@ public class DestroyGenericReactions {
     public static final BorateEsterHydrolysis BORATE_ESTER_HYDROLYSIS = new BorateEsterHydrolysis();
     // public static final BorateEsterification BORATE_ESTERIFICATION = new BorateEsterification(); // any solution containing boron compounds, even just boric acid or trace borate ions, becomes a disgusting mess of constantly esterifying generics
     public static final BorohydrideCarbonylReduction BOROHYDRIDE_CARBONYL_REDUCTION = new BorohydrideCarbonylReduction();
-    // public static final CarboxylicAcidReduction CARBOXYLIC_ACID_REDUCTION = new CarboxylicAcidReduction();
+    public static final CarboxylicAcidReduction CARBOXYLIC_ACID_REDUCTION = new CarboxylicAcidReduction();
     public static final CyanamideAddition CYANAMIDE_ADDITION = new CyanamideAddition();
     public static final CarboxylicAcidEsterification CARBOXYLIC_ACID_ESTERIFICATION = new CarboxylicAcidEsterification();
     public static final CyanideNucleophilicAddition CYANIDE_NUCLEOPHILIC_ADDITION = new CyanideNucleophilicAddition();
@@ -81,6 +83,7 @@ public class DestroyGenericReactions {
     public static final HalideCyanideSubstitution HALIDE_CYANIDE_SUBSTITUTION = new HalideCyanideSubstitution();
     public static final HalideHydroxideSubstitution HALIDE_HYDROXIDE_SUBSTITUTION = new HalideHydroxideSubstitution();
     public static final IsocyanateHydrolysis ISOCYANATE_HYDROLYSIS = new IsocyanateHydrolysis();
+    public static final LeuckartReaction LEUKART_REACTION = new LeuckartReaction();
     public static final NitrileHydrogenation NITRILE_HYDROGENATION = new NitrileHydrogenation();
     public static final NitrileHydrolysis NITRILE_HYDROLYSIS = new NitrileHydrolysis();
     public static final NitroHydrogenation NITRO_HYDROGENATION = new NitroHydrogenation();

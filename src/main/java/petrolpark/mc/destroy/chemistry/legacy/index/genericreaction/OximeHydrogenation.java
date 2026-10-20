@@ -29,8 +29,9 @@ public class OximeHydrogenation extends SingleGroupGenericReaction<OximeGroup> {
 
         structure.moveTo(group.carbon)
                 .remove(group.nitrogen)
-                .addAtom(LegacyElement.NITROGEN);
-        structure.addAllHydrogens();
+                .addGroup(LegacyMolecularStructure.atom(LegacyElement.NITROGEN)
+                        .addAtom(LegacyElement.HYDROGEN)
+                        .addAtom(LegacyElement.HYDROGEN));
 
         return reactionBuilder()
                 .addReactant(reactant.molecule)

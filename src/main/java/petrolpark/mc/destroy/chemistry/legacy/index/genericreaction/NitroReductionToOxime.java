@@ -1,7 +1,6 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import petrolpark.mc.destroy.Destroy;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
@@ -31,14 +30,13 @@ public class NitroReductionToOxime extends SingleGroupGenericReaction<NitroGroup
           return null;
 
         LegacyMolecularStructure structure = reactant.molecule.shallowCopyStructure();
-        LegacyAtom newNitrogen = new LegacyAtom(LegacyElement.NITROGEN);
         structure.moveTo(group.carbon)
                 .remove(group.nitrogen)
                 .remove(group.firstOxygen)
                 .remove(group.secondOxygen)
-                .addAtom(newNitrogen, LegacyBond.BondType.DOUBLE)
-                .moveTo(newNitrogen)
-                .addGroup(LegacyMolecularStructure.alcohol());
+                .addGroup(LegacyMolecularStructure.atom(LegacyElement.NITROGEN)
+                                .addGroup(LegacyMolecularStructure.alcohol()),
+                        true, LegacyBond.BondType.DOUBLE);
 
         if (reactant.molecule.isHypothetical())
             structure.addAllHydrogens();

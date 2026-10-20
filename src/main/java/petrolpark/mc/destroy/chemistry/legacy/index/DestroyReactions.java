@@ -1157,6 +1157,7 @@ public class DestroyReactions {
     static {
         builder().acid(DestroyMolecules.ACETIC_ACID, DestroyMolecules.ACETATE, 4.76f);
         builder().acid(DestroyMolecules.AMMONIUM, DestroyMolecules.AMMONIA, 9.25f);
+        builder().acid(DestroyMolecules.FORMIC_ACID, DestroyMolecules.FORMATE, 3.75f);
         builder().acid(DestroyMolecules.HYDROCHLORIC_ACID, DestroyMolecules.CHLORIDE, -6.3f);
         builder().acid(DestroyMolecules.HYDROFLUORIC_ACID, DestroyMolecules.FLUORIDE, 3.17f);
         builder().acid(DestroyMolecules.HYDROGEN_CYANIDE, DestroyMolecules.CYANIDE, 9.2f);

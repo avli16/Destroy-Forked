@@ -530,6 +530,19 @@ public final class DestroyMolecules {
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:CCO^-1"))
         .build(),
 
+    FORMALDEHYDE = builder()
+            .id("formaldehyde")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:C(=O)"))
+            .boilingPoint(-19f)
+            .density(815f)
+            .molarHeatCapacity(35.4f)
+            .build(),
+
+    FORMATE = builder()
+            .id("formate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:C~(~O^-0.5)O^-0.5"))
+            .build(),
+
     FORMIC_ACID = builder()
             .id("formic_acid")
             .structure(LegacyMolecularStructure.deserialize("destroy:linear:C(=O)OH"))
