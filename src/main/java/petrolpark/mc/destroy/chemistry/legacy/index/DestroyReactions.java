@@ -296,8 +296,9 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.CHROMIUM_III, 2)
         .build(),
 
+    // TODO impurities
     CHROMIUM_ORE_DISSOLUTION = builder() // TODO replace with redox
-        .id("iron_ore_dissolution")
+        .id("chromium_ore_dissolution")
         .addReactant(DestroyMolecules.PROTON, 6, 1)
         .addSimpleItemReactant(DestroyItems.CRUSHED_RAW_CHROMIUM::get, 7.5f)
         .addProduct(DestroyMolecules.HYDROGEN, 3)
@@ -315,12 +316,20 @@ public class DestroyReactions {
 
     CHROMIUM_III_REDUCTION_WITH_ZINC = builder() // TODO replace with redox
             .id("chromium_iii_reduction_with_zinc")
-            .addReactant(DestroyMolecules.CHROMIUM_III, 2)
+            .addReactant(DestroyMolecules.CHROMIUM_III, 18)
             .addSimpleItemTagReactant(PetrolparkTags.commonItemTag("dusts/zinc"), 1f)
-            .addCatalyst(DestroyMolecules.PROTON, 1)
-            .addProduct(DestroyMolecules.CHROMIUM_II, 2)
-            .addProduct(DestroyMolecules.ZINC_ION)
+            .addCatalyst(DestroyMolecules.PROTON, 9)
+            .addProduct(DestroyMolecules.CHROMIUM_II, 18)
+            .addProduct(DestroyMolecules.ZINC_ION, 9)
             // TODO kinetics and thermodynamics
+            .build(),
+
+    CHROMIUM_II_OXIDATION = builder() // TODO oxygen as the oxidizer
+            .id("chromium_ii_oxidation")
+            .addReactant(DestroyMolecules.CHROMIUM_II, 2)
+            .addReactant(DestroyMolecules.HYDROGEN_PEROXIDE, 1)
+            .addReactant(DestroyMolecules.HYDROXIDE, 6)
+            .addProduct(DestroyMolecules.CHROMIUM_III, 2)
             .build(),
 
     CISPLATIN_SYNTHESIS = builder()
@@ -1103,6 +1112,7 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.ZINC_ION)
         .build(),
 
+    // TODO impurities
     ZINC_ORE_DISSOLUTION = builder() // TODO replace with redox
         .id("zinc_ore_dissolution")
         .addReactant(DestroyMolecules.PROTON, 2, 1)

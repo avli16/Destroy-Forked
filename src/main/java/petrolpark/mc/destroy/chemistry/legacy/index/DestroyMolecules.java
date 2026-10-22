@@ -312,22 +312,23 @@ public final class DestroyMolecules {
         .build(),
 
     CHROMATE = builder()
-        .id("chromate")
-        .structure(LegacyMolecularStructure.deserialize("destroy:linear:O=Cr=(-O^-1)(-O^-1)O"))
-        .color(0xD0F7ED2C)
-        .build(),
+            .id("chromate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:O=Cr=(-O^-1)(-O^-1)O"))
+            .color(0xD0F7ED2C)
+            .tag(Tags.CARCINOGEN)
+            .build(),
 
     CHROMIUM_II = builder()
-        .id("chromium_ii")
-        .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 2))
-        .color(0xC00C8610)
-        .build(),
+            .id("chromium_ii")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 2))
+            .color(0xC00C8610)
+            .build(),
 
     CHROMIUM_III = builder()
-        .id("chromium_iii")
-        .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 3))
-        .color(0xD00D9614)
-        .build(),
+            .id("chromium_iii")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.CHROMIUM, 3))
+            .color(0xD00D9614)
+            .build(),
 
     CISPLATIN = builder()
         .id("cisplatin")
@@ -686,7 +687,7 @@ public final class DestroyMolecules {
 
     GENERIC_OXIME = builder()
             .id("generic_oxime")
-            .structure(LegacyMolecularStructure.deserialize("destroy:linear:RC(=NOH)R"))
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:RC(=NO)R"))
             .hypothetical()
             .translationKey("oxime")
             .build(),
@@ -829,7 +830,6 @@ public final class DestroyMolecules {
         .tag(Tags.ACUTELY_TOXIC)
         .tag(Tags.BLEACH)
         .tag(Tags.OZONE_DEPLETER)
-        .tag(Tags.BLEACH)
         .build(),
 
     HYPOCHLORITE = builder()
@@ -862,14 +862,15 @@ public final class DestroyMolecules {
         .build(),
 
     IODOMETHANE = builder()
-        .id("iodomethane")
-        .structure(LegacyMolecularStructure.deserialize("destroy:linear:CI"))
-        .boilingPoint(42.6f)
-        .density(2280f)
-        .molarHeatCapacity(82.75f)
-        .tag(Tags.ACUTELY_TOXIC)
-        .tag(Tags.SMOG)
-        .build(),
+            .id("iodomethane")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:CI"))
+            .boilingPoint(42.6f)
+            .density(2280f)
+            .molarHeatCapacity(82.75f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.CARCINOGEN)
+            .tag(Tags.SMOG)
+            .build(),
 
     IRON_II = builder()
         .id("iron_ii")

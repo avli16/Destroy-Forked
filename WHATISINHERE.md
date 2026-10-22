@@ -6,24 +6,28 @@
     - Oxime hydrolysis
     - Nitro group reduction to oxime
   - Lecukart reaction
+- Fixed chromium dissolution
 - Chromium (II)
 - Cyclohexane topology
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
 - Toluene chlorination
-- Sulfur dioxide refrigerant
+- Sulfur dioxide refrigerant tag
 - Chalk dissolution reaction
 - Carbon capture requires hydroxide
-- Fix borohydride carbonyl reduction
+- Fixed borohydride carbonyl reduction
 - Alkyne hydration
 
 TODO(important but im too lazy):
 - [ ] Reagents as items(10mol, 1mol, 0.1mol)
 - [ ] More "single-use" intermediates
-- [ ] Petrochem 
+- [ ] Petrochem
   - [ ] Create: Diesel Generators integration
+  - [ ] Crate: TFMG integration
   - Something more idk though
+- [ ] Piss -aging-> hydrolized piss -heating-> ammonia gas -absorption-> NH4OH
+- [ ] Trace metals in ores
 
 TODO(less important):
 - [ ] Urea
@@ -39,6 +43,7 @@ TODO(less important):
   - [ ] Carbocation rearrangements
   - [ ] Lewis acid catalysts special handling
 - [ ] NaK
+- [ ] Alkyne deprotonation
 - [ ] Anisole
 - [ ] Phosphorus pentasulfide
 - [ ] Lawesson's reagent
@@ -47,3 +52,5 @@ TODO(less important):
 - [ ] Toluene overchlorination
   - [ ] Benzyl chloride chlorination into benzal chloride
   - [ ] Benzal chloride chlorination into benzotrichloride
+- [ ] Hydrogen embrittlement
+- [ ] PtCl2 and its use for cisplatin

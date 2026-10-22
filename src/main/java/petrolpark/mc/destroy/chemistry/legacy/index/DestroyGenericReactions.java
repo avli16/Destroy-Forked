@@ -83,7 +83,7 @@ public class DestroyGenericReactions {
     public static final HalideCyanideSubstitution HALIDE_CYANIDE_SUBSTITUTION = new HalideCyanideSubstitution();
     public static final HalideHydroxideSubstitution HALIDE_HYDROXIDE_SUBSTITUTION = new HalideHydroxideSubstitution();
     public static final IsocyanateHydrolysis ISOCYANATE_HYDROLYSIS = new IsocyanateHydrolysis();
-    public static final LeuckartReaction LEUKART_REACTION = new LeuckartReaction();
+    public static final LeuckartReaction LEUCKART_REACTION = new LeuckartReaction();
     public static final NitrileHydrogenation NITRILE_HYDROGENATION = new NitrileHydrogenation();
     public static final NitrileHydrolysis NITRILE_HYDROLYSIS = new NitrileHydrolysis();
     public static final NitroHydrogenation NITRO_HYDROGENATION = new NitroHydrogenation();
