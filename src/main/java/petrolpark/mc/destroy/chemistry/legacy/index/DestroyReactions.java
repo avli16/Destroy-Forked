@@ -324,13 +324,13 @@ public class DestroyReactions {
             // TODO kinetics and thermodynamics
             .build(),
 
-    CHROMIUM_II_OXIDATION = builder() // TODO oxygen as the oxidizer
-            .id("chromium_ii_oxidation")
-            .addReactant(DestroyMolecules.CHROMIUM_II, 2)
-            .addReactant(DestroyMolecules.HYDROGEN_PEROXIDE, 1)
-            .addReactant(DestroyMolecules.HYDROXIDE, 6)
-            .addProduct(DestroyMolecules.CHROMIUM_III, 2)
-            .build(),
+//    CHROMIUM_II_OXIDATION = builder() // TODO oxygen as the oxidizer
+//            .id("chromium_ii_oxidation")
+//            .addReactant(DestroyMolecules.CHROMIUM_II, 2)
+//            .addReactant(DestroyMolecules.HYDROGEN_PEROXIDE, 1)
+//            .addReactant(DestroyMolecules.HYDROXIDE, 6)
+//            .addProduct(DestroyMolecules.CHROMIUM_III, 2)
+//            .build(),
 
     CISPLATIN_SYNTHESIS = builder()
         .id("cisplatin_synthesis")
@@ -413,6 +413,7 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.COPPER_II)
         .build(),
 
+    // TODO impurities
     COPPER_ORE_DISSOLUTION = builder() // TODO replace with redox
         .id("copper_ore_dissolution")
         .addReactant(DestroyMolecules.PROTON, 2, 1)
@@ -631,6 +632,7 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.IRON_III, 2)
         .build(),
 
+    // TODO impurities
     IRON_ORE_DISSOLUTION = builder() // TODO replace with redox
         .id("iron_ore_dissolution")
         .addReactant(DestroyMolecules.PROTON, 6, 1)
@@ -697,16 +699,17 @@ public class DestroyReactions {
         .build(),
     
     MERCURY_FULMINATION = builder()
-        .id("mercury_fulmination")
-        .addReactant(DestroyMolecules.MERCURY, 3, 1)
-        .addReactant(DestroyMolecules.NITRATE, 12, 2)
-        .addReactant(DestroyMolecules.ETHANOL, 4, 1)
-        .addProduct(DestroyMolecules.CARBON_DIOXIDE, 2)
-        .addProduct(DestroyMolecules.HYDROXIDE, 12)
-        .addProduct(DestroyMolecules.WATER, 6)
-        .addProduct(DestroyMolecules.NITROGEN_DIOXIDE, 6)
-        .withResult(5f, PrecipitateReactionResult.of(DestroyItems.FULMINATED_MERCURY::asStack))
-        .build(),
+            .id("mercury_fulmination")
+            .addReactant(DestroyMolecules.MERCURY, 3, 1)
+            .addReactant(DestroyMolecules.NITRATE, 12, 2)
+            .addReactant(DestroyMolecules.ETHANOL, 4, 1)
+            .addCatalyst(DestroyMolecules.PROTON, 0)
+            .addProduct(DestroyMolecules.CARBON_DIOXIDE, 2)
+            .addProduct(DestroyMolecules.HYDROXIDE, 12)
+            .addProduct(DestroyMolecules.WATER, 6)
+            .addProduct(DestroyMolecules.NITROGEN_DIOXIDE, 6)
+            .withResult(5f, PrecipitateReactionResult.of(DestroyItems.FULMINATED_MERCURY::asStack))
+            .build(),
 
     METAXYLENE_TRANSALKYLATION = builder()
         .id("metaxylene_transalkylation")

@@ -25,9 +25,12 @@ TODO(important but im too lazy):
 - [ ] Petrochem
   - [ ] Create: Diesel Generators integration
   - [ ] Crate: TFMG integration
+  - [ ] Bitumen from oil distillation
+  - Maybe sulfur refinement(sulfurized oil -catalyst, H2-> H2S and then Claus process)
   - Something more idk though
 - [ ] Piss -aging-> hydrolized piss -heating-> ammonia gas -absorption-> NH4OH
 - [ ] Trace metals in ores
+- [ ] Split Ostwald process
 
 TODO(less important):
 - [ ] Urea
@@ -37,7 +40,7 @@ TODO(less important):
 - [ ] Creatinine
 - [ ] Urea and creatinine in piss
 - [ ] Eschweiler Clarke alkylation
-  - should LeuckartReaction be abstracted into some kind of ```abstract class ReductiveAmination
+  - should this and LeuckartReaction be abstracted into some kind of ```abstract class ReductiveAmination
     extends DoubleGroupGenericReaction<CarbonylGroup, AmineGroup>```?
 - [ ] Friedel Craft's alkylation
   - [ ] Carbocation rearrangements
@@ -52,5 +55,6 @@ TODO(less important):
 - [ ] Toluene overchlorination
   - [ ] Benzyl chloride chlorination into benzal chloride
   - [ ] Benzal chloride chlorination into benzotrichloride
-- [ ] Hydrogen embrittlement
+- [ ] Hydrogen embrittlement of vats
 - [ ] PtCl2 and its use for cisplatin
+- [ ] Phenoxide in Kolbe Schmitt reaction

@@ -1,14 +1,6 @@
 package petrolpark.mc.destroy;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.BooleanSupplier;
-import java.util.function.Supplier;
-
-import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab;
-import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab.ITabEntry;
 import com.simibubi.create.AllCreativeModeTabs;
-
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -22,8 +14,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
 import petrolpark.mc.destroy.config.DestroySubstancesConfigs;
+import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab;
+import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab.ITabEntry;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BooleanSupplier;
+import java.util.function.Supplier;
 
 /** Item/block references are resolved by registry ID (not compile-time field
  * access), so any 1.21 port-deferred entry is silently skipped instead of breaking compile.
@@ -120,9 +118,8 @@ public class DestroyCreativeModeTabs {
                 d("unvarnished_plywood"), d("plywood"),
                 d("clay_monolith"), d("ceramic_monolith"),
                 d("chalk_dust"), d("quicklime"), d("calcium_carbide"), d("sodium_hydride"),
-                d("zeolite"), d("nanodiamonds"), d("slag"));  // slag was missing from tab
-            // crude_oil_bucket removed from creative tab — crude oil should be obtainable
-            // only through Pumpjack extraction (preserves intended progression / chemistry gating).
+                d("zeolite"), d("nanodiamonds"), d("slag"), // slag was missing from tab
+                d("crude_oil_bucket"));
 
             add(entries, sub("explosives"));
             add(entries, ITabEntry.LINE_BREAK,
@@ -219,6 +216,25 @@ public class DestroyCreativeModeTabs {
                 .icon(() -> DestroyItems.LOGO.asStack())
                 .build();
         });
+
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> COMMON_REAGENTS = TABS.register("common_reagents",
+            () -> {
+                List<ITabEntry> entries = new ArrayList<>();
+
+                add(entries, new ITabEntry.Subheading(Component.literal("0.1mol"))); // I don't think this needs to be a localized key
+
+                add(entries, new ITabEntry.Subheading(Component.literal("1mol"))); // Neither does this
+
+                add(entries, new ITabEntry.Subheading(Component.literal("10mol"))); // Same here
+
+                CustomTab.Builder builder = new CustomTab.Builder(CreativeModeTab.Row.TOP, 0);
+                builder.add(entries.toArray(new ITabEntry[0]));
+                return builder
+                        .title(Component.translatable("itemGroup.destroy.common_reagents"))
+                        .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
+                        .icon(() -> DestroyItems.CREATINE.asStack())
+                        .build();
+            });
 
     // ---- helpers ----
 

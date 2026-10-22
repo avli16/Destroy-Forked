@@ -1648,6 +1648,8 @@
     "itemGroup.destroy.base.processing": "Processing",
     "itemGroup.destroy.base.resources": "Other Resources",
 
+    "itemGroup.destroy.common_reagents": "Destroy's Common Reagents",
+
     "item.destroy.abs": "ABS",
     "item.destroy.acetone_peroxide": "TATP",
     "item.destroy.anfo": "ANFO",
