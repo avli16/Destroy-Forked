@@ -245,8 +245,11 @@ public class DestroyClientModEvents {
 
         // Mysterious Item Conversion JEI hints (Empty Blaze Burner ↔ Cooler etc.).
         // Must run client-side only because MysteriousItemConversionCategory.RECIPES is a
-        // client-side static list consumed by JEI plugin reg.
-        event.enqueueWork(petrolpark.mc.destroy.DestroyMysteriousItemConversions::addAll);
+        // client-side static list consumed by JEI plugin reg. Guarded by Mods.JEI.isLoading()
+        // so that clients without JEI do not crash attempting to load JEI category classes.
+        if (petrolpark.mc.library.compat.Mods.JEI.isLoading()) {
+            event.enqueueWork(petrolpark.mc.destroy.DestroyMysteriousItemConversions::addAll);
+        }
 
         SimpleBlockEntityVisualizer.builder(DestroyBlockEntityTypes.TREE_TAP.get())
             .factory(TreeTapVisual::new)
