@@ -9,6 +9,7 @@
 - Fixed chromium dissolution
 - Chromium (II)
 - Cyclohexane topology
+- Aging/fermentation takes longer
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
@@ -26,11 +27,13 @@ TODO(important but im too lazy):
   - [ ] Create: Diesel Generators integration
   - [ ] Crate: TFMG integration
   - [ ] Bitumen from oil distillation
-  - Maybe sulfur refinement(sulfurized oil -catalyst, H2-> H2S and then Claus process)
-  - Something more idk though
-- [ ] Piss -aging-> hydrolized piss -heating-> ammonia gas -absorption-> NH4OH
+  - Claus process
+- [ ] Piss -aging-> hydrolyzed piss -heating-> ammonia gas -absorption-> NH4OH
+  - [x] Hydrolyzed piss
 - [ ] Trace metals in ores
+- [ ] Sulfur ore, zirconium and fluorite (textures already there!)
 - [ ] Split Ostwald process
+- [ ] Replace nonrealistic electrolysis of metals with something else
 
 TODO(less important):
 - [ ] Urea
@@ -58,3 +61,4 @@ TODO(less important):
 - [ ] Hydrogen embrittlement of vats
 - [ ] PtCl2 and its use for cisplatin
 - [ ] Phenoxide in Kolbe Schmitt reaction
+- [ ] Twice distilled moonshine

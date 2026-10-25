@@ -119,7 +119,7 @@ public class DestroyCreativeModeTabs {
                 d("clay_monolith"), d("ceramic_monolith"),
                 d("chalk_dust"), d("quicklime"), d("calcium_carbide"), d("sodium_hydride"),
                 d("zeolite"), d("nanodiamonds"), d("slag"), // slag was missing from tab
-                d("crude_oil_bucket"));
+                d("crude_oil_bucket"), d("hydrolyzed_urine_bucket"));
 
             add(entries, sub("explosives"));
             add(entries, ITabEntry.LINE_BREAK,

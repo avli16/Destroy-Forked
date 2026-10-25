@@ -1,0 +1,17 @@
+{
+  "type": "destroy:aging",
+  "ingredients": [
+    {
+      "fluid": "destroy:urine",
+      "amount": 1000,
+      "type": "neoforge:single"
+    }
+  ],
+  "results": [
+    {
+      "amount": 1000,
+      "id": "destroy:hydrolyzed_urine"
+    }
+  ],
+  "processing_time": 18000
+}

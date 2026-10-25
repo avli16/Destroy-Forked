@@ -1,17 +1,11 @@
 package petrolpark.mc.destroy;
 
-import static petrolpark.mc.destroy.Destroy.REGISTRATE;
-
-import petrolpark.mc.destroy.core.registrate.DestroyRegistrate;
-import petrolpark.mc.library.PetrolparkTags;
-import petrolpark.mc.library.core.world.fluid.ColoredFluidType;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.fluids.VirtualFluid;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.VirtualFluidBuilder;
 import com.tterrag.registrate.builders.FluidBuilder;
 import com.tterrag.registrate.util.entry.FluidEntry;
-
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.Fluid;
 import net.neoforged.neoforge.fluids.FluidStack;
@@ -19,6 +13,11 @@ import petrolpark.mc.destroy.chemistry.minecraft.MixtureFluid;
 import petrolpark.mc.destroy.chemistry.minecraft.MixtureFluid.MixtureFluidType;
 import petrolpark.mc.destroy.content.processing.moltenblock.MoltenBorosilicateGlassFluid;
 import petrolpark.mc.destroy.content.processing.moltenblock.MoltenStainlessSteelFluid;
+import petrolpark.mc.destroy.core.registrate.DestroyRegistrate;
+import petrolpark.mc.library.PetrolparkTags;
+import petrolpark.mc.library.core.world.fluid.ColoredFluidType;
+
+import static petrolpark.mc.destroy.Destroy.REGISTRATE;
 
 /**
  * Destroy's fluid registry.
@@ -70,6 +69,13 @@ public class DestroyFluids {
     URINE = virtualFluid("urine")
         .tag(PetrolparkTags.commonFluidTag("urine"))
         .register(),
+
+    HYDROLYZED_URINE = virtualFluid("hydrolyzed_urine")
+            .tag(PetrolparkTags.commonFluidTag("hydrolyzed_urine"))
+            .bucket()
+                .tag(PetrolparkTags.commonItemTag("buckets/hydrolyzed_urine"))
+                .build()
+            .register(),
 
     APPLE_JUICE = coloredWaterFluid("apple_juice", 0xC0F2DB46)
         .tag(PetrolparkTags.commonFluidTag("apple_juice"))
