@@ -62,5 +62,4 @@ public class HalideAmineSubstitution extends DoubleGroupGenericReaction<HalideGr
         if (el == LegacyElement.IODINE) return DestroyMolecules.IODIDE;
         throw new GenericReactionGenerationException(el.toString() + " is not a halogen.");
     };
-    
 };

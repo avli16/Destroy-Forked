@@ -255,6 +255,20 @@ public final class DestroyMolecules {
         .tag(Tags.SMELLY)
         .build(),
 
+    CHLOROACETATE = builder()
+            .id("chloroacetate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:ClCC~(~O^-0.5)O^-0.5"))
+            .build(),
+
+    CHLOROACETIC_ACID = builder()
+            .id("chloroacetic_acid")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:ClCC(=O)O"))
+            .boilingPoint(189f)
+            .density(1580f)
+            .molarHeatCapacity(144.02f) // solid @ 15-45C
+            .tag(Tags.ACUTELY_TOXIC)
+            .build(),
+
     CHLOROAURATE = builder()
         .id("chloroaurate")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:ClAu^-1(Cl)(Cl)Cl"))
@@ -1120,6 +1134,11 @@ public final class DestroyMolecules {
         .tag(Tags.SMOG)
         .build(),
 
+    PHENYLACETATE = builder()
+            .id("phenylacetate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:CC~(~O^-0.5)O^-0.5"))
+            .build(),
+
     PHENYLACETIC_ACID = builder()
         .id("phenylacetic_acid")
         .structure(LegacyMolecularStructure.deserialize("destroy:benzene:CC(=O)O"))
@@ -1371,6 +1390,14 @@ public final class DestroyMolecules {
         .tag(Tags.CARCINOGEN)
         .tag(Tags.SMOG)
         .build(),
+
+    // Not sure whether uronium should be added. pKa = 0.1
+    UREA = builder()
+            .id("urea")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:NC(=O)N"))
+            .density(132f)
+            .molarHeatCapacity(92.79f)
+            .build(),
 
     VINYL_ACETATE = builder()
         .id("vinyl_acetate")

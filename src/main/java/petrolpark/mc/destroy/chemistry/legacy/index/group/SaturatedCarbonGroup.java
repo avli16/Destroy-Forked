@@ -4,9 +4,9 @@ import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyFunctionalGroup;
 
 public abstract class SaturatedCarbonGroup extends LegacyFunctionalGroup<SaturatedCarbonGroup> {
-
     public final LegacyAtom highDegreeCarbon;
     public final LegacyAtom lowDegreeCarbon;
+    public boolean hasHydrogen; // TODO This should rather be isTerminal
 
     public SaturatedCarbonGroup(LegacyAtom highDegreeCarbon, LegacyAtom lowDegreeCarbon) {
         super();

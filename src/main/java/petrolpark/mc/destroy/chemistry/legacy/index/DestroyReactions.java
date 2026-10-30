@@ -1170,6 +1170,7 @@ public class DestroyReactions {
     static {
         builder().acid(DestroyMolecules.ACETIC_ACID, DestroyMolecules.ACETATE, 4.76f);
         builder().acid(DestroyMolecules.AMMONIUM, DestroyMolecules.AMMONIA, 9.25f);
+        builder().acid(DestroyMolecules.CHLOROACETIC_ACID, DestroyMolecules.CHLOROACETATE, 2.86f);
         builder().acid(DestroyMolecules.FORMIC_ACID, DestroyMolecules.FORMATE, 3.75f);
         builder().acid(DestroyMolecules.HYDROCHLORIC_ACID, DestroyMolecules.CHLORIDE, -6.3f);
         builder().acid(DestroyMolecules.HYDROFLUORIC_ACID, DestroyMolecules.FLUORIDE, 3.17f);
@@ -1179,6 +1180,7 @@ public class DestroyReactions {
         builder().acid(DestroyMolecules.HYDROXYLAMMONIUM, DestroyMolecules.HYDROXYLAMINE, 5.94f);
         builder().acid(DestroyMolecules.HYPOCHLOROUS_ACID, DestroyMolecules.HYPOCHLORITE, 7.53f);
         builder().acid(DestroyMolecules.NITRIC_ACID, DestroyMolecules.NITRATE, -1.3f);
+        builder().acid(DestroyMolecules.PHENYLACETIC_ACID, DestroyMolecules.PHENYLACETATE, 4.31f);
         builder().acid(DestroyMolecules.SULFURIC_ACID, DestroyMolecules.HYDROGENSULFATE, -2.18f);
     };
 

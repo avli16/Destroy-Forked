@@ -10,6 +10,7 @@
 - Chromium (II)
 - Cyclohexane topology
 - Aging/fermentation takes longer
+- A bunch of more named molecules
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
@@ -25,23 +26,25 @@ TODO(important but im too lazy):
 - [ ] More "single-use" intermediates
 - [ ] Petrochem
   - [ ] Create: Diesel Generators integration
-  - [ ] Crate: TFMG integration
   - [ ] Bitumen from oil distillation
   - Claus process
 - [ ] Piss -aging-> hydrolyzed piss -heating-> ammonia gas -absorption-> NH4OH
   - [x] Hydrolyzed piss
 - [ ] Trace metals in ores
-- [ ] Sulfur ore, zirconium and fluorite (textures already there!)
+- [ ] Add minor features that were already planned for upstream Destroy (textures already there!)
+  - [ ] Sulfur ore, zirconium and fluorite
+  - [ ] Prussian blue
 - [ ] Split Ostwald process
 - [ ] Replace nonrealistic electrolysis of metals with something else
 
 TODO(less important):
-- [ ] Urea
+- [x] Urea
   - [ ] Urea nitrate explosive
   - Maybe urea-mediated amidation?
   - Maybe urea-mediated carbamylation reaction?
 - [ ] Creatinine
 - [ ] Urea and creatinine in piss
+- [ ] Sandmeyer's reaction
 - [ ] Eschweiler Clarke alkylation
   - should this and LeuckartReaction be abstracted into some kind of ```abstract class ReductiveAmination
     extends DoubleGroupGenericReaction<CarbonylGroup, AmineGroup>```?
