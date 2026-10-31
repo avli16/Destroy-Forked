@@ -122,6 +122,14 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.CYCLOHEXENE)
         .build(),
 
+//    BENZOTRICHLORIDE_HYDROLYSIS = builder()
+//            .id("benzotrichloride_hydrolysis")
+//            .addReactant(DestroyMolecules.BENZOTRICHLORIDE)
+//            .addReactant(DestroyMolecules.WATER)
+//            .addProduct(DestroyMolecules.BENZOYL_CHLORIDE)
+//            .addProduct(DestroyMolecules.HYDROCHLORIC_ACID, 2)
+//            .build(),
+
     BORAX_DISSOLUTION = builder()
         .id("borax_dissolution")
         .addReactant(DestroyMolecules.PROTON, 2, 1)
@@ -1053,9 +1061,29 @@ public class DestroyReactions {
         .addReactant(DestroyMolecules.CHLORINE)
         .addProduct(DestroyMolecules.BENZYL_CHLORIDE)
         .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
-        // TODO kinetics
+        .activationEnergy(22.5f) // Taken from methane chlorination. TODO: check whether it's alright
         .requireUV()
         .build(),
+
+    BENZYL_CHLORIDE_CHLORINATION = builder()
+            .id("benzyl_chloride_chlorination")
+            .addReactant(DestroyMolecules.BENZYL_CHLORIDE)
+            .addReactant(DestroyMolecules.CHLORINE)
+            .addProduct(DestroyMolecules.BENZAL_CHLORIDE)
+            .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+            .activationEnergy(29.5f) // TODO: check whether it's alright
+            .requireUV()
+            .build(),
+
+    BENZAL_CHLORIDE_CHLORINATION = builder()
+            .id("benzal_chloride_chlorination")
+            .addReactant(DestroyMolecules.BENZAL_CHLORIDE)
+            .addReactant(DestroyMolecules.CHLORINE)
+            .addProduct(DestroyMolecules.BENZOTRICHLORIDE)
+            .addProduct(DestroyMolecules.HYDROCHLORIC_ACID)
+            .activationEnergy(36.5f) // TODO: check whether it's alright
+            .requireUV()
+            .build(),
 
     TOLUENE_NITRATION = builder()
         .id("toluene_nitration")

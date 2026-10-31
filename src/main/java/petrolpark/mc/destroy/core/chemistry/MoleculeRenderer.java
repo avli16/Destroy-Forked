@@ -1,20 +1,10 @@
 package petrolpark.mc.destroy.core.chemistry;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import org.joml.Quaternionf;
-
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.platform.Lighting;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
-import petrolpark.mc.library.util.MathsHelper;
-
 import dev.engine_room.flywheel.lib.transform.TransformStack;
 import net.createmod.catnip.animation.AnimationTickHolder;
 import net.createmod.catnip.data.Pair;
@@ -39,7 +29,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.client.RenderTypeGroup;
 import net.neoforged.neoforge.client.model.IModelBuilder;
 import net.neoforged.neoforge.client.textures.UnitTextureAtlasSprite;
-
+import org.joml.Quaternionf;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure.Topology.SideChainInformation;
@@ -48,6 +38,13 @@ import petrolpark.mc.destroy.chemistry.serializer.Branch;
 import petrolpark.mc.destroy.chemistry.serializer.Edge;
 import petrolpark.mc.destroy.chemistry.serializer.Node;
 import petrolpark.mc.destroy.client.PushingQuadBakingVertexConsumer;
+import petrolpark.mc.library.util.MathsHelper;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * 3D ball-and-stick molecule renderer. Consumed by the molecule-display GUI + JEI ingredient
@@ -270,12 +267,13 @@ public class MoleculeRenderer {
         TRIGONAL_PLANAR(new Vec3(0.5d, 0.86602540378d, 0d).normalize(), new Vec3(0.5d, -0.86602540378d, 0d).normalize()),
         TRIGONAL_PYRAMIDAL(new Vec3(0.333333d, -0.942809d, 0d).normalize(), new Vec3(0.333333d, 0.471405d, 0.816497d).normalize()),
         TETRAHEDRAL(new Vec3(0.333333d, -0.942809d, 0d).normalize(), new Vec3(0.333333d, 0.471405d, 0.816497d).normalize(), new Vec3(0.333333d, 0.471405d, -0.816497d).normalize()),
-        OCTAHEDRAL(new Vec3(1d, 0d, 0d), new Vec3(0d, 1d, 0d), new Vec3(0d, -1d, 0d), new Vec3(0d, 0d, 1d), new Vec3(0d, 0d, -1d));
+        TRIGONAL_BIPYRAMIDAL(new Vec3(1d, 0d, 0d), new Vec3(-0.5d, 0.86602540378d, 0d), new Vec3(-0.5d, -0.86602540378d, 0d), new Vec3(0d, 0d, 1d), new Vec3(0d, 0d, -1d)),
+        OCTAHEDRAL(new Vec3(1d, 0d, 0d), new Vec3(0d, 1d, 0d), new Vec3(0d, -1d, 0d), new Vec3(0d, 0d, 1d), new Vec3(0d, 0d, -1d), new Vec3(-1d, 0d, 0d));
 
         private static final Vec3 standardDirection = new Vec3(1d, 0d, 0d);
         private static final Vec3 inverseStandardDirection = new Vec3(-1d, 0d, 0d);
 
-        final ImmutableList<Vec3> connections;
+        public final ImmutableList<Vec3> connections;
 
         Geometry(Vec3... connections) {
             this.connections = ImmutableList.copyOf(connections);

@@ -11,6 +11,8 @@
 - Cyclohexane topology
 - Aging/fermentation takes longer
 - A bunch of more named molecules
+- Added a trigonal bipyramidal molecule geometry
+- Fixed texture UV of elements
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
@@ -23,6 +25,7 @@ Took these from @flynnvali:
 
 TODO(important but im too lazy):
 - [ ] Reagents as items(10mol, 1mol, 0.1mol)
+  - I imagine them being just measuring cylinders with existing NBT
 - [ ] More "single-use" intermediates
 - [ ] Petrochem
   - [ ] Create: Diesel Generators integration
@@ -32,8 +35,12 @@ TODO(important but im too lazy):
   - [x] Hydrolyzed piss
 - [ ] Trace metals in ores
 - [ ] Add minor features that were already planned for upstream Destroy (textures already there!)
-  - [ ] Sulfur ore, zirconium and fluorite
+  - [ ] Sulfur, zirconium and fluorite
   - [ ] Prussian blue
+  - [ ] Chalk
+  - [ ] Once/Twice distilled moonshine
+  - [ ] Soap
+  - [ ] Naphthalene
 - [ ] Split Ostwald process
 - [ ] Replace nonrealistic electrolysis of metals with something else
 
@@ -58,10 +65,10 @@ TODO(less important):
 - [ ] Lawesson's reagent
 - [ ] Thionation reactions (P4O10 = bad yield/bad whatever)
 - [ ] Reactions of thiocarbonyls
-- [ ] Toluene overchlorination
-  - [ ] Benzyl chloride chlorination into benzal chloride
-  - [ ] Benzal chloride chlorination into benzotrichloride
+- [x] Toluene overchlorination
+  - [x] Benzyl chloride chlorination into benzal chloride
+  - [x] Benzal chloride chlorination into benzotrichloride
 - [ ] Hydrogen embrittlement of vats
 - [ ] PtCl2 and its use for cisplatin
 - [ ] Phenoxide in Kolbe Schmitt reaction
-- [ ] Twice distilled moonshine
+- [ ] Induction heater allowing for precise temperature control

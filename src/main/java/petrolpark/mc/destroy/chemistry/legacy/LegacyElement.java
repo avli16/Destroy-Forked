@@ -1,17 +1,15 @@
 package petrolpark.mc.destroy.chemistry.legacy;
 
+import dev.engine_room.flywheel.lib.model.baked.PartialModel;
+import net.minecraft.resources.ResourceLocation;
+import petrolpark.mc.destroy.core.chemistry.MoleculeRenderer.Geometry;
+
+import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
-
-import javax.annotation.Nullable;
-
-import dev.engine_room.flywheel.lib.model.baked.PartialModel;
-import net.minecraft.resources.ResourceLocation;
-
-import petrolpark.mc.destroy.core.chemistry.MoleculeRenderer.Geometry;
 
 /**
  * Chemical element definition for Destroy's legacy chemistry engine. Each element carries its
@@ -261,24 +259,18 @@ public class LegacyElement implements Comparable<LegacyElement> {
      * classes. Server code must not invoke this.</p>
      */
     public Geometry getGeometry(int connections) {
-        Geometry geometry = null;
-        if (geometryOverride != null) geometry = geometryOverride.apply(connections);
-        if (geometry != null) return geometry;
-        switch (connections) {
-            case 0:
-            case 1:
-            case 2:
-                return Geometry.LINEAR;
-            case 3:
-                return Geometry.TRIGONAL_PLANAR;
-            case 4:
-                return Geometry.TETRAHEDRAL;
-            case 5:
-                // TODO add trigonal bipyramidal geometry
-            case 6:
-                return Geometry.OCTAHEDRAL;
-            default:
-                return Geometry.OCTAHEDRAL;
+        if (geometryOverride != null) {
+            Geometry geometry = geometryOverride.apply(connections);
+            if (geometry != null) return geometry;
         }
+
+        return switch (connections) {
+            case 0, 1, 2 -> Geometry.LINEAR;
+            case 3 -> Geometry.TRIGONAL_PLANAR;
+            case 4 -> Geometry.TETRAHEDRAL;
+            case 5 -> Geometry.TRIGONAL_BIPYRAMIDAL;
+            case 6 -> Geometry.OCTAHEDRAL;
+            default -> Geometry.OCTAHEDRAL;
+        };
     }
 }

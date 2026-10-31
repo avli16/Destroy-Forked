@@ -153,6 +153,18 @@ public final class DestroyMolecules {
         .tag(Tags.SMOG)
         .build(),
 
+    BENZAL_CHLORIDE = builder()
+            .id("benzal_chloride")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:C(Cl)(Cl),,,,,"))
+            .boilingPoint(205f)
+            .density(1254f)
+            // Didn't bother with heat capacity
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.CARCINOGEN)
+            .tag(Tags.OZONE_DEPLETER)
+            .tag(Tags.SMOG)
+            .build(),
+
     BENZENE = builder()
         .id("benzene")
         .structure(LegacyMolecularStructure.deserialize("destroy:benzene:,,,,"))
@@ -164,16 +176,28 @@ public final class DestroyMolecules {
         .tag(Tags.SOLVENT)
         .build(),
 
+    BENZOTRICHLORIDE = builder()
+            .id("benzotrichloride")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:C(Cl)(Cl)(Cl),,,,,"))
+            .boilingPoint(220f)
+            .density(1375.6f)
+            // Didn't bother with heat capacity
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.CARCINOGEN)
+            .tag(Tags.SMOG)
+            .build(),
+
     BENZYL_CHLORIDE = builder()
-        .id("benzyl_chloride")
-        .structure(LegacyMolecularStructure.deserialize("destroy:benzene:CCl,,,,,"))
-        .boilingPoint(179f)
-        .density(1100f)
-        .molarHeatCapacity(182.4f)
-        .tag(Tags.ACUTELY_TOXIC)
-        .tag(Tags.OZONE_DEPLETER)
-        .tag(Tags.SMOG)
-        .build(),
+            .id("benzyl_chloride")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:CCl,,,,,"))
+            .boilingPoint(179f)
+            .density(1100f)
+            .molarHeatCapacity(182.4f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.OZONE_DEPLETER)
+            .tag(Tags.SMELLY)
+            .tag(Tags.SMOG)
+            .build(),
     
     BORIC_ACID = builder()
         .id("boric_acid")
