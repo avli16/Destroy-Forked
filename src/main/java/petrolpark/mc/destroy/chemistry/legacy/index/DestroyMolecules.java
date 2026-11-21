@@ -1083,7 +1083,7 @@ public final class DestroyMolecules {
 
     NAPHTHALENE = builder()
             .id("naphthalene")
-            .structure(LegacyMolecularStructure.deserialize("destroy:naphthalene:,,,,,,,,"))
+            .structure(LegacyMolecularStructure.deserialize("destroy:naphthalene:,,,,,,,"))
             .boilingPoint(218f)
             .density(1145f)
             .tag(Tags.SMOG)

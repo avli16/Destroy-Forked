@@ -572,7 +572,7 @@ public class DestroyTopologies {
                     new int[]{1, 0, 7, 6, 5, 4, 3, 2},
                     new int[]{5, 4, 3, 2, 1, 0, 7, 6},
                     new int[]{4, 5, 6, 7, 0, 1, 2, 3}
-            }).build("naphthalene.json"),
+            }).build("naphthalene"),
 
     OCTASULFUR = create(LegacyElement.SULFUR) // 0
         .atom(LegacyElement.SULFUR, new Vec3(-0.25d, 0.75d, 0.6124d)) // 1
