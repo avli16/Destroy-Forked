@@ -15,6 +15,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import petrolpark.mc.destroy.config.DestroySubstancesConfigs;
+import petrolpark.mc.library.compat.Mods;
 import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab;
 import petrolpark.mc.library.core.world.item.creativeModeTab.CustomTab.ITabEntry;
 
@@ -139,8 +140,8 @@ public class DestroyCreativeModeTabs {
                 // CBC compat: shell + charge blocks only register when createbigcannons
                 // is loaded (Mods.BIG_CANNONS.executeIfInstalled guard in Destroy.java). Tab
                 // resolver silently skips null lookups, so entries degrade cleanly.
-                cond("custom_explosive_mix_charge", () -> petrolpark.mc.library.compat.Mods.BIG_CANNONS.isLoaded()),
-                cond("custom_explosive_mix_shell", () -> petrolpark.mc.library.compat.Mods.BIG_CANNONS.isLoaded()),
+                cond("custom_explosive_mix_charge", Mods.BIG_CANNONS::isLoaded),
+                cond("custom_explosive_mix_shell", Mods.BIG_CANNONS::isLoaded),
                 d("dynamite_block"),
                 d("cordite_block"), d("extruded_cordite_block"));
 
@@ -213,28 +214,9 @@ public class DestroyCreativeModeTabs {
             return builder
                 .title(Component.translatable("itemGroup.destroy.base"))
                 .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
-                .icon(() -> DestroyItems.LOGO.asStack())
+                .icon(DestroyItems.LOGO::asStack)
                 .build();
         });
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> COMMON_REAGENTS = TABS.register("common_reagents",
-            () -> {
-                List<ITabEntry> entries = new ArrayList<>();
-
-                add(entries, new ITabEntry.Subheading(Component.literal("0.1mol"))); // I don't think this needs to be a localized key
-
-                add(entries, new ITabEntry.Subheading(Component.literal("1mol"))); // Neither does this
-
-                add(entries, new ITabEntry.Subheading(Component.literal("10mol"))); // Same here
-
-                CustomTab.Builder builder = new CustomTab.Builder(CreativeModeTab.Row.TOP, 0);
-                builder.add(entries.toArray(new ITabEntry[0]));
-                return builder
-                        .title(Component.translatable("itemGroup.destroy.common_reagents"))
-                        .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
-                        .icon(() -> DestroyItems.CREATINE.asStack())
-                        .build();
-            });
 
     // ---- helpers ----
 

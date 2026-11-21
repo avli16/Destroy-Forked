@@ -198,6 +198,11 @@ public final class DestroyMolecules {
             .tag(Tags.SMELLY)
             .tag(Tags.SMOG)
             .build(),
+
+    BICARBONATE = builder()
+            .id("bicarbonate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:OC~(~O^-0.5)O^-0.5"))
+            .build(),
     
     BORIC_ACID = builder()
         .id("boric_acid")
@@ -213,6 +218,23 @@ public final class DestroyMolecules {
         .id("borohydride")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:HB^-1(H)(H)H"))
         .build(),
+
+    BROMIDE = builder()
+            .id("bromide")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.BROMINE, -1))
+            .build(),
+
+    BROMINE = builder()
+            .id("bromine")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:BrBr"))
+            .color(0xF0A52A2A)
+            .boilingPoint(58.85f)
+            .density(3102.8f)
+            .molarHeatCapacity(75.69f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.OZONE_DEPLETER)
+            .tag(Tags.SMELLY) // brómos
+            .build(),
 
     BUTADIENE = builder()
         .id("butadiene")
@@ -261,6 +283,11 @@ public final class DestroyMolecules {
         .tag(Tags.CARCINOGEN)
         .tag(Tags.OZONE_DEPLETER)
         .build(),
+
+    CARBONATE = builder()
+            .id("carbonate")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:C~(~O^-0.66667)(~O^-0.66667)O^-0.66667"))
+            .build(),
 
     CHLORIDE = builder()
         .id("chloride")
@@ -812,6 +839,15 @@ public final class DestroyMolecules {
         .molarHeatCapacity(28.84f)
         .build(),
 
+    HYDROGEN_BROMIDE = builder()
+            .id("hydrogen_bromide")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.BROMINE).addAtom(LegacyElement.HYDROGEN))
+            .boilingPoint(-66.8f)
+            .density(3307f)
+            .molarHeatCapacity(28.37f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .build(),
+
     HYDROGEN_CYANIDE = builder()
         .id("hydrogen_cyanide")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:N#C"))
@@ -822,12 +858,13 @@ public final class DestroyMolecules {
         .build(),
 
     HYDROGEN_IODIDE = builder()
-        .id("hydrogen_iodide")
-        .structure(LegacyMolecularStructure.atom(LegacyElement.IODINE).addAtom(LegacyElement.HYDROGEN))
-        .boilingPoint(-35.36f)
-        .density(2850)
-        .molarHeatCapacity(29.2f)
-        .build(),
+            .id("hydrogen_iodide")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.IODINE).addAtom(LegacyElement.HYDROGEN))
+            .boilingPoint(-35.36f)
+            .density(2850f)
+            .molarHeatCapacity(29.2f)
+            .tag(Tags.ACUTELY_TOXIC)
+            .build(),
     
     HYDROGEN_PEROXIDE = builder()
         .id("hydrogen_peroxide")
@@ -855,6 +892,7 @@ public final class DestroyMolecules {
     HYDROXYLAMINE = builder()
             .id("hydroxylamine")
             .structure(LegacyMolecularStructure.deserialize("destroy:linear:HN(OH)H"))
+            .tag(Tags.CARCINOGEN)
             .build(),
 
     HYDROXYLAMMONIUM = builder()

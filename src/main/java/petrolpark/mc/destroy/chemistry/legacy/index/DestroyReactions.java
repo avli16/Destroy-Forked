@@ -1,5 +1,7 @@
 package petrolpark.mc.destroy.chemistry.legacy.index;
 
+import com.simibubi.create.AllItems;
+import net.minecraft.world.item.Items;
 import petrolpark.mc.destroy.Destroy;
 import petrolpark.mc.destroy.DestroyAdvancementTrigger;
 import petrolpark.mc.destroy.DestroyBlocks;
@@ -7,13 +9,9 @@ import petrolpark.mc.destroy.DestroyItems;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction.ReactionBuilder;
 import petrolpark.mc.destroy.chemistry.legacy.reactionresult.CombinedReactionResult;
-import petrolpark.mc.destroy.chemistry.legacy.reactionresult.ExplosionReactionResult;
 import petrolpark.mc.destroy.chemistry.legacy.reactionresult.PrecipitateReactionResult;
 import petrolpark.mc.destroy.config.DestroySubstancesConfigs;
-import com.simibubi.create.AllItems;
 import petrolpark.mc.library.PetrolparkTags;
-
-import net.minecraft.world.item.Items;
 
 public class DestroyReactions {
 
@@ -206,7 +204,7 @@ public class DestroyReactions {
         .id("carbon_capture")
         .addReactant(DestroyMolecules.CALCIUM_ION)
         .addReactant(DestroyMolecules.CARBON_DIOXIDE)
-        .addReactant(DestroyMolecules.HYDROXIDE, 2  )
+        .addReactant(DestroyMolecules.HYDROXIDE, 2)
         .addProduct(DestroyMolecules.WATER)
         .withResult(2f, PrecipitateReactionResult.of(DestroyItems.CHALK_DUST::asStack))
         .build(),
@@ -244,6 +242,13 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.CALCIUM_ION)
         .addCatalyst(DestroyMolecules.WATER, 2)
         .build(),
+
+    CHALK_PRECIPITATION = builder()
+            .id("chalk_dissolution")
+            .addReactant(DestroyMolecules.CALCIUM_ION)
+            .addReactant(DestroyMolecules.CARBONATE)
+            .withResult(2f, PrecipitateReactionResult.of(DestroyItems.CHALK_DUST::asStack))
+            .build(),
 
     CHLORINE_HALOFORM_REACTION = builder()
         .id("chlorine_haloform_reaction")
@@ -401,7 +406,7 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.WATER, 2)
         .build(), // TODO add "tungsten" catalyst. This reaction also has as phase-transfer catalyst but I have chosen to ignore it.
     
-    // TODO possible cyclopentanone/cyclopentadiene interconversion
+    // TODO cyclopentanone/cyclopentadiene interconversion
     // TODO cyclopentanone synthesis from adipic acid
 
     CHROMATE_CONVERSION = builder()
@@ -510,7 +515,7 @@ public class DestroyReactions {
         .addReactant(DestroyMolecules.OXYGEN)
         .addProduct(DestroyMolecules.CALCIUM_ION)
         .addProduct(DestroyMolecules.CYANAMIDE_ION)
-        .addProduct(DestroyMolecules.CARBON_DIOXIDE) // todo maybe make it make soot instead of including oxygen in the reactants
+        .addProduct(DestroyMolecules.CARBON_DIOXIDE) // TODO make it make soot instead of including oxygen in the reactants
         .activationEnergy(50f)
         .build(),
 
@@ -586,7 +591,7 @@ public class DestroyReactions {
         .addReactant(DestroyMolecules.HYDROXIDE)
         .addReactant(DestroyMolecules.PROTON)
         .addProduct(DestroyMolecules.WATER)
-        .activationEnergy(0f)// Assume diffusion limited; temperature-independent
+        .activationEnergy(0f) // Assume diffusion limited; temperature-independent
         .preexponentialFactor(1.3e8f) // TODO fiddle with values because currently Water is the most acidic substance in the mod
         .enthalpyChange(-55.3745f)
         .reverseReaction(reaction -> reaction
@@ -757,7 +762,6 @@ public class DestroyReactions {
         .addReactant(DestroyMolecules.PHENYLACETONE)
         .addReactant(DestroyMolecules.METHYLAMINE)
         .withResult(0f, (m, r) -> new CombinedReactionResult(m, r)
-            .with(ExplosionReactionResult::small)
             .with(DestroyAdvancementTrigger.TRY_TO_MAKE_METH::asReactionResult)
         ).dontIncludeInJei()
         .build(),

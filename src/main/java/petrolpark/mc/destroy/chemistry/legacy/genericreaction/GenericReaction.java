@@ -71,7 +71,7 @@ public abstract class GenericReaction {
             + id.toString() + "': " + string);
     }
 
-    public class GenericReactionGenerationException extends ChemistryException {
+    public static class GenericReactionGenerationException extends ChemistryException {
 
         public GenericReactionGenerationException(String message) {
             super(message);

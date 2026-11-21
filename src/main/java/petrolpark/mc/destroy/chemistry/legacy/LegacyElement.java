@@ -57,8 +57,10 @@ public class LegacyElement implements Comparable<LegacyElement> {
     public static final LegacyElement FLUORINE   = new LegacyElement("FLUORINE",   rl("fluorine"),  "F",  19.00f,  4.0f,  new double[]{1},          null, atomModel("fluorine"));
     public static final LegacyElement SODIUM     = new LegacyElement("SODIUM",     rl("sodium"),    "Na", 23.00f,  0.9f,  new double[]{1},          null, atomModel("sodium"));
     public static final LegacyElement CHLORINE   = new LegacyElement("CHLORINE",   rl("chlorine"),  "Cl", 35.45f,  3.0f,  new double[]{1},          null, atomModel("chlorine"));
+    public static final LegacyElement BROMINE    = new LegacyElement("BROMINE",    rl("bromine"),   "Br", 79.90f,  2.8f,  new double[]{1},          null, atomModel("bromine"));
     public static final LegacyElement POTASSIUM  = new LegacyElement("POTASSIUM",  rl("potassium"), "K",  39.10f,  0.8f,  new double[]{1},          null, atomModel("potassium"));
     public static final LegacyElement CALCIUM    = new LegacyElement("CALCIUM",    rl("calcium"),   "Ca", 40.08f,  1.0f,  new double[]{2},          null, atomModel("calcium"));
+    public static final LegacyElement BARIUM     = new LegacyElement("BARIUM",     rl("barium"),    "Ba", 137.33f, 0.9f,  new double[]{2},          null, atomModel("barium"));
     public static final LegacyElement CHROMIUM   = new LegacyElement("CHROMIUM",   rl("chromium"),  "Cr", 52.00f,  1.66f, new double[]{2d, 3d, 6d}, null, atomModel("chromium"));
     public static final LegacyElement IRON       = new LegacyElement("IRON",       rl("iron"),      "Fe", 55.85f,  1.8f,  new double[]{0, 2, 3},    null, atomModel("iron"));
     public static final LegacyElement NICKEL     = new LegacyElement("NICKEL",     rl("nickel"),    "Ni", 58.69f,  1.8f,  new double[]{1},          null, atomModel("nickel"));

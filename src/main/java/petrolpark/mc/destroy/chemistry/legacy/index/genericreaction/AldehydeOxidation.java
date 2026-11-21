@@ -1,20 +1,20 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
-import java.util.List;
-
 import petrolpark.mc.destroy.Destroy;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
 import petrolpark.mc.destroy.chemistry.legacy.LegacySpecies;
 import petrolpark.mc.destroy.chemistry.legacy.ReadOnlyMixture;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.genericreaction.GenericReactant;
 import petrolpark.mc.destroy.chemistry.legacy.genericreaction.SingleGroupGenericReaction;
 import petrolpark.mc.destroy.chemistry.legacy.index.DestroyGroupTypes;
 import petrolpark.mc.destroy.chemistry.legacy.index.DestroyMolecules;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.CarbonylGroup;
+
+import java.util.List;
 
 public class AldehydeOxidation extends SingleGroupGenericReaction<CarbonylGroup> {
 
@@ -34,7 +34,7 @@ public class AldehydeOxidation extends SingleGroupGenericReaction<CarbonylGroup>
         LegacyMolecularStructure structure = reactant.getMolecule().shallowCopyStructure();
         List<LegacyAtom> hydrogens = structure.moveTo(carbonyl.carbon).getBondedAtomsOfElement(LegacyElement.HYDROGEN);
         if (hydrogens.isEmpty()) return null; // This should never be the case
-        structure.remove(hydrogens.get(0))
+        structure.remove(hydrogens.getFirst())
             .addGroup(LegacyMolecularStructure.alcohol());
         return reactionBuilder()
             .addReactant(reactant.getMolecule(), 3, 1)

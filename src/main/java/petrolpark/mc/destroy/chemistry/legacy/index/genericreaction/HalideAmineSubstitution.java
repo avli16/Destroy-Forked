@@ -1,13 +1,12 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import petrolpark.mc.destroy.Destroy;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyAtom;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyElement;
+import petrolpark.mc.destroy.chemistry.legacy.IonUtil;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
 import petrolpark.mc.destroy.chemistry.legacy.LegacySpecies;
 import petrolpark.mc.destroy.chemistry.legacy.ReadOnlyMixture;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
-import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.genericreaction.DoubleGroupGenericReaction;
 import petrolpark.mc.destroy.chemistry.legacy.genericreaction.GenericReactant;
 import petrolpark.mc.destroy.chemistry.legacy.index.DestroyGroupTypes;
@@ -47,19 +46,9 @@ public class HalideAmineSubstitution extends DoubleGroupGenericReaction<HalideGr
             .addReactant(firstReactant.getMolecule())
             .addReactant(secondReactant.getMolecule(), 1, 2)
             .addProduct(substitutedAmine)
-            .addProduct(getIon(halideGroup.halogen))
+            .addProduct(IonUtil.getHalideIon(halideGroup.halogen))
             .addProduct(DestroyMolecules.PROTON)
             // TODO kinetics
             .build();
-    };
-
-    public LegacySpecies getIon(LegacyAtom atom) {
-        // Phase 2b: LegacyElement was an enum (allowing `case CONSTANT:` shorthand) but is now
-        // a class to support datapack-defined elements — switch needs the qualified == form.
-        LegacyElement el = atom.getElement();
-        if (el == LegacyElement.FLUORINE) return DestroyMolecules.FLUORIDE;
-        if (el == LegacyElement.CHLORINE) return DestroyMolecules.CHLORIDE;
-        if (el == LegacyElement.IODINE) return DestroyMolecules.IODIDE;
-        throw new GenericReactionGenerationException(el.toString() + " is not a halogen.");
     };
 };

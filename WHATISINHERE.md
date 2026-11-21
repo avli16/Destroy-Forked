@@ -13,6 +13,7 @@
 - A bunch of more named molecules
 - Added a trigonal bipyramidal molecule geometry
 - Fixed texture UV of elements
+- New elements(so far: barium and bromine)
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
@@ -24,25 +25,31 @@ Took these from @flynnvali:
 - Alkyne hydration
 
 TODO(important but im too lazy):
-- [ ] Reagents as items(10mol, 1mol, 0.1mol)
-  - I imagine them being just measuring cylinders with existing NBT
+- Common precipitation reactions of Ba and Ca
+- [ ] Carbonic acid/carbonate/bicarbonate mechanisms
+- [ ] Acetone from Calcium acetate thermal decomposition
 - [ ] More "single-use" intermediates
+- [ ] More plastics' uses
 - [ ] Petrochem
   - [ ] Create: Diesel Generators integration
   - [ ] Bitumen from oil distillation
   - Claus process
+- [ ] Monazite sands
+- [ ] Granite leachate
 - [ ] Piss -aging-> hydrolyzed piss -heating-> ammonia gas -absorption-> NH4OH
   - [x] Hydrolyzed piss
 - [ ] Trace metals in ores
 - [ ] Add minor features that were already planned for upstream Destroy (textures already there!)
   - [ ] Sulfur, zirconium and fluorite
   - [ ] Prussian blue
-  - [ ] Chalk
+  - [ ] Chalk(calcium carbonate)
   - [ ] Once/Twice distilled moonshine
   - [ ] Soap
   - [ ] Naphthalene
 - [ ] Split Ostwald process
 - [ ] Replace nonrealistic electrolysis of metals with something else
+- [ ] Add water electrolysis
+- [ ] Abstract acyl chlorides into acyl halides
 
 TODO(less important):
 - [x] Urea
@@ -59,16 +66,23 @@ TODO(less important):
   - [ ] Carbocation rearrangements
   - [ ] Lewis acid catalysts special handling
 - [ ] NaK
+- [ ] Calcium sulfate
 - [ ] Alkyne deprotonation
 - [ ] Anisole
 - [ ] Phosphorus pentasulfide
 - [ ] Lawesson's reagent
 - [ ] Thionation reactions (P4O10 = bad yield/bad whatever)
 - [ ] Reactions of thiocarbonyls
+- [ ] Tobacconist integration
+  - [ ] Nicotine extract
 - [x] Toluene overchlorination
   - [x] Benzyl chloride chlorination into benzal chloride
   - [x] Benzal chloride chlorination into benzotrichloride
+- [ ] Benzal chloride instability
+- [ ] Phenylacetaldehyde instablity(oxidation in air)
 - [ ] Hydrogen embrittlement of vats
 - [ ] PtCl2 and its use for cisplatin
 - [ ] Phenoxide in Kolbe Schmitt reaction
 - [ ] Induction heater allowing for precise temperature control
+
+No AI use btw!
