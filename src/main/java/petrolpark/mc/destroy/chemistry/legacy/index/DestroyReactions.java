@@ -500,6 +500,13 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.PARAXYLENE)
         .build(),
 
+    FERROCYANIDE_COMPLEXATION = builder()
+            .id("ferrocyanide_complexation")
+            .addReactant(DestroyMolecules.IRON_II, 1)
+            .addReactant(DestroyMolecules.CYANIDE, 6)
+            .addProduct(DestroyMolecules.FERROCYANIDE, 1)
+            .build(),
+
     FLUORITE_DISSOLUTION = builder()
         .id("fluorite_dissolution")
         .addReactant(DestroyMolecules.PROTON, 2, 1)
@@ -662,13 +669,13 @@ public class DestroyReactions {
         .activationEnergy(10f)
         .build(),
 
-    // IRON_III_REDUCTION = builder()
-    // .id("iron_iii_reduction")
-    // .addReactant(DestroyMolecules.IRON_III)
-    // .addProduct(DestroyMolecules.IRON_II)
-    // .standardHalfCellPotential(0.771f)
-    // .reverseReaction(r -> {})
-    // .build(),
+     IRON_III_REDUCTION = builder()
+         .id("iron_iii_reduction")
+         .addReactant(DestroyMolecules.IRON_III)
+         .addProduct(DestroyMolecules.IRON_II)
+         .standardHalfCellPotential(0.771f)
+         .reverseReaction(r -> {})
+         .build(),
 
     KELP_DISSOLUTION = builder()
         .id("kelp_dissolution")
@@ -853,7 +860,7 @@ public class DestroyReactions {
         .withResult(0f, DestroyAdvancementTrigger.OSTWALD_PROCESS::asReactionResult)
         .build(), // TODO potentially split into multiple equations, and add side reactions
 
-    // TODO phenylacetic acid synthesis, either from benzyl chloride or benzyl cyanide
+    // TODO some other phenylacetic acid synthesis
 
     PARAXYLENE_TRANSALKYLATION = builder()
         .id("paraxylene_transalkylation")
@@ -901,6 +908,13 @@ public class DestroyReactions {
         ).preexponentialFactor(10f)
         .activationEnergy(10f)
         .build(),
+
+    PRUSSIAN_BLUE_PRECIPITATION = builder()
+            .id("prussian_blue_precipitation")
+            .addReactant(DestroyMolecules.IRON_III, 4)
+            .addReactant(DestroyMolecules.FERROCYANIDE, 3)
+            .withResult(1f, PrecipitateReactionResult.of(DestroyItems.PRUSSIAN_BLUE::asStack))
+            .build(),
 
     SODIUM_AMALGAMIZATION = builder()
         .id("sodium_amalgamization")

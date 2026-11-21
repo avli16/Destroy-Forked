@@ -153,6 +153,11 @@ public final class DestroyMolecules {
         .tag(Tags.SMOG)
         .build(),
 
+    BARIUM_ION = builder()
+            .id("barium_ion")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.BARIUM, 2))
+            .build(),
+
     BENZAL_CHLORIDE = builder()
             .id("benzal_chloride")
             .structure(LegacyMolecularStructure.deserialize("destroy:benzene:C(Cl)(Cl),,,,,"))
@@ -249,7 +254,12 @@ public final class DestroyMolecules {
     C20_FULLERENE = builder()
             .id("c20_fullerene")
             .structure(LegacyMolecularStructure.deserialize("destroy:c20_fullerene:,"))
-            // Specific heat capacity unknown
+            .tag(Tags.SMOG)
+            .build(),
+
+    C60_FULLERENE = builder()
+            .id("c60_fullerene")
+            .structure(LegacyMolecularStructure.deserialize("destroy:c60_fullerene:,"))
             .tag(Tags.SMOG)
             .build(),
 
@@ -602,6 +612,11 @@ public final class DestroyMolecules {
         .id("ethoxide")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:CCO^-1"))
         .build(),
+
+    FERROCYANIDE = builder()
+            .id("ferrocyanide")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:N#CFe^-4(C#N)(C#N)(C#N)(C#N)C#N"))
+            .build(),
 
     FORMALDEHYDE = builder()
             .id("formaldehyde")
@@ -1065,6 +1080,14 @@ public final class DestroyMolecules {
         .tag(Tags.FRAGRANT)
         .tag(Tags.SMOG)
         .build(),
+
+    NAPHTHALENE = builder()
+            .id("naphthalene")
+            .structure(LegacyMolecularStructure.deserialize("destroy:naphthalene:,,,,,,,,"))
+            .boilingPoint(218f)
+            .density(1145f)
+            .tag(Tags.SMOG)
+            .build(),
     
     NICKEL_ION = builder()
         .id("nickel_ion")

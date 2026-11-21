@@ -86,76 +86,289 @@ public class DestroyTopologies {
 
     C20_FULLERENE = create(LegacyElement.CARBON) // 0
             .atom(LegacyElement.CARBON, new Vec3(-1d, -0.381966011250105d, 0.618033988749895d)) // 1
-            .withBondTo(0, BondType.SINGLE)
-            .attach()
+                .withBondTo(0, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 0.618033988749895d, -1d)) // 2
-            .withBondTo(0, BondType.SINGLE)
-            .attach()
+                .withBondTo(0, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, -1d, -0.381966011250105d)) // 3
-            .withBondTo(0, BondType.DOUBLE)
-            .attach()
+                .withBondTo(0, BondType.DOUBLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-2d, 0d, 0d)) // 4
-            .withBondTo(1, BondType.SINGLE)
-            .attach()
+                .withBondTo(1, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-1d, -1.618033988749895d, 0.618033988749895d)) // 5
-            .withBondTo(1, BondType.DOUBLE)
-            .attach()
+                .withBondTo(1, BondType.DOUBLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(0d, 0d, -2d)) // 6
-            .withBondTo(2, BondType.SINGLE)
-            .attach()
+                .withBondTo(2, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 0.618033988749895d, -1d)) // 7
-            .withBondTo(2, BondType.DOUBLE)
-            .withBondTo(4, BondType.SINGLE)
-            .attach()
+                .withBondTo(2, BondType.DOUBLE)
+                .withBondTo(4, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(0d, -2d, 0d)) // 8
-            .withBondTo(3, BondType.SINGLE)
-            .withBondTo(5, BondType.SINGLE)
-            .attach()
+                .withBondTo(3, BondType.SINGLE)
+                .withBondTo(5, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, -1d, -1.618033988749895d)) // 9
-            .withBondTo(3, BondType.SINGLE)
-            .withBondTo(6, BondType.DOUBLE)
-            .attach()
+                .withBondTo(3, BondType.SINGLE)
+                .withBondTo(6, BondType.DOUBLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-2.618033988749895d, -1d, -0.381966011250105d)) // 10
-            .withBondTo(4, BondType.DOUBLE)
+                .withBondTo(4, BondType.DOUBLE)
             .attach()
-            .atom(LegacyElement.CARBON, new Vec3(-2d, -2d, 0d)) // 11
-            .withBondTo(5, BondType.SINGLE)
-            .withBondTo(10, BondType.SINGLE)
+                .atom(LegacyElement.CARBON, new Vec3(-2d, -2d, 0d)) // 11
+                .withBondTo(5, BondType.SINGLE)
+                .withBondTo(10, BondType.SINGLE)
             .attach()
-            .atom(LegacyElement.CARBON, new Vec3(-1d, -0.381966011250105d, -2.618033988749895d)) // 12
-            .withBondTo(6, BondType.SINGLE)
+                .atom(LegacyElement.CARBON, new Vec3(-1d, -0.381966011250105d, -2.618033988749895d)) // 12
+                .withBondTo(6, BondType.SINGLE)
             .attach()
-            .atom(LegacyElement.CARBON, new Vec3(-2d, 0d, -2d)) // 13
-            .withBondTo(7, BondType.SINGLE)
-            .withBondTo(12, BondType.DOUBLE)
+                .atom(LegacyElement.CARBON, new Vec3(-2d, 0d, -2d)) // 13
+                .withBondTo(7, BondType.SINGLE)
+                .withBondTo(12, BondType.DOUBLE)
             .attach()
-            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, -2.618033988749895d, -1d)) // 14
-            .withBondTo(8, BondType.DOUBLE)
-            .attach()
+                .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, -2.618033988749895d, -1d)) // 14
+                .withBondTo(8, BondType.DOUBLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(0d, -2d, -2d)) // 15
-            .withBondTo(9, BondType.SINGLE)
-            .withBondTo(14, BondType.SINGLE)
-            .attach()
+                .withBondTo(9, BondType.SINGLE)
+                .withBondTo(14, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-2.618033988749895d, -1d, -1.618033988749895d)) // 16
-            .withBondTo(10, BondType.SINGLE)
-            .withBondTo(13, BondType.SINGLE)
-            .attach()
+                .withBondTo(10, BondType.SINGLE)
+                .withBondTo(13, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, -2.618033988749895d, -1d)) // 17
-            .withBondTo(11, BondType.DOUBLE)
-            .withBondTo(14, BondType.SINGLE)
-            .attach()
+                .withBondTo(11, BondType.DOUBLE)
+                .withBondTo(14, BondType.SINGLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-1d, -1.618033988749895d, -2.618033988749895d)) // 18
-            .withBondTo(12, BondType.SINGLE)
-            .withBondTo(15, BondType.DOUBLE)
-            .attach()
+                .withBondTo(12, BondType.SINGLE)
+                .withBondTo(15, BondType.DOUBLE)
+                .attach()
             .atom(LegacyElement.CARBON, new Vec3(-2d, -2d, -2d)) // 19
-            .withBondTo(16, BondType.DOUBLE)
-            .withBondTo(17, BondType.SINGLE)
-            .withBondTo(18, BondType.SINGLE)
-            .attach()
+                .withBondTo(16, BondType.DOUBLE)
+                .withBondTo(17, BondType.SINGLE)
+                .withBondTo(18, BondType.SINGLE)
+                .attach()
             .reflections(new int[][]{
                     new int[0]
             }).build("c20_fullerene"),
+
+    C60_FULLERENE = create(LegacyElement.CARBON) // 0
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, 0.0d, 0.0d)) // 1
+            .withBondTo(0, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.618033988749895d, -0.381966011250105d, 1.0d)) // 2
+            .withBondTo(0, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 1.0d, -0.618033988749895d)) // 3
+            .withBondTo(0, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.854101966249684d, -0.381966011250105d, 1.0d)) // 4
+            .withBondTo(1, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.618033988749895d, 1.0d, -0.618033988749895d)) // 5
+            .withBondTo(1, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.0d, -0.76393202250021d, 2.0d)) // 6
+            .withBondTo(2, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 0.23606797749979d, 1.381966011250105d)) // 7
+            .withBondTo(2, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, 1.618033988749895d, -1.0d)) // 8
+            .withBondTo(3, BondType.DOUBLE)
+            .withBondTo(5, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.381966011250105d, 1.618033988749895d, -0.23606797749979d)) // 9
+            .withBondTo(3, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.854101966249685d, 0.23606797749979d, 1.381966011250105d)) // 10
+            .withBondTo(4, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, -0.76393202250021d, 2.0d)) // 11
+            .withBondTo(4, BondType.SINGLE)
+            .withBondTo(6, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.618033988749895d, 1.618033988749895d, -0.23606797749979d)) // 12
+            .withBondTo(5, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.618033988749895d, -0.381966011250105d, 3.0d)) // 13
+            .withBondTo(6, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 0.23606797749979d, 2.618033988749895d)) // 14
+            .withBondTo(7, BondType.DOUBLE)
+            .withBondTo(13, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.0d, 1.23606797749979d, 0.76393202250021d)) // 15
+            .withBondTo(7, BondType.SINGLE)
+            .withBondTo(9, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, 2.854101966249685d, -1.0d)) // 16
+            .withBondTo(8, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.381966011250105d, 2.854101966249685d, -0.23606797749979d)) // 17
+            .withBondTo(9, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.23606797749979d, 1.23606797749979d, 0.76393202250021d)) // 18
+            .withBondTo(10, BondType.SINGLE)
+            .withBondTo(12, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.854101966249685d, 0.23606797749979d, 2.618033988749895d)) // 19
+            .withBondTo(10, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.854101966249684d, -0.381966011250105d, 3.0d)) // 20
+            .withBondTo(11, BondType.DOUBLE)
+            .withBondTo(19, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.618033988749895d, 2.854101966249685d, -0.23606797749979d)) // 21
+            .withBondTo(12, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.0d, 0.0d, 4.0d)) // 22
+            .withBondTo(13, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.0d, 1.23606797749979d, 3.23606797749979d)) // 23
+            .withBondTo(14, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.381966011250105d, 2.23606797749979d, 1.381966011250105d)) // 24
+            .withBondTo(15, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.618033988749895d, 3.47213595499958d, -0.618033988749895d)) // 25
+            .withBondTo(16, BondType.DOUBLE)
+            .withBondTo(21, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 3.47213595499958d, -0.618033988749895d)) // 26
+            .withBondTo(16, BondType.SINGLE)
+            .withBondTo(17, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.0d, 3.23606797749979d, 0.76393202250021d)) // 27
+            .withBondTo(17, BondType.SINGLE)
+            .withBondTo(24, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.618033988749895d, 2.23606797749979d, 1.381966011250105d)) // 28
+            .withBondTo(18, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.23606797749979d, 1.23606797749979d, 3.23606797749979d)) // 29
+            .withBondTo(19, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, 0.0d, 4.0d)) // 30
+            .withBondTo(20, BondType.SINGLE)
+            .withBondTo(22, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.23606797749979d, 3.23606797749979d, 0.76393202250021d)) // 31
+            .withBondTo(21, BondType.DOUBLE)
+            .withBondTo(28, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 1.0d, 4.618033988749895d)) // 32
+            .withBondTo(22, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.381966011250105d, 1.618033988749895d, 4.23606797749979d)) // 33
+            .withBondTo(23, BondType.DOUBLE)
+            .withBondTo(32, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.381966011250105d, 2.23606797749979d, 2.618033988749895d)) // 34
+            .withBondTo(23, BondType.SINGLE)
+            .withBondTo(24, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, 4.47213595499958d, 0.0d)) // 35
+            .withBondTo(25, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.0d, 4.47213595499958d, 0.0d)) // 36
+            .withBondTo(26, BondType.DOUBLE)
+            .withBondTo(35, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 4.23606797749979d, 1.381966011250105d)) // 37
+            .withBondTo(27, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.618033988749895d, 2.23606797749979d, 2.618033988749895d)) // 38
+            .withBondTo(28, BondType.SINGLE)
+            .withBondTo(29, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.618033988749895d, 1.618033988749895d, 4.23606797749979d)) // 39
+            .withBondTo(29, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.618033988749895d, 1.0d, 4.618033988749895d)) // 40
+            .withBondTo(30, BondType.DOUBLE)
+            .withBondTo(39, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.854101966249685d, 4.23606797749979d, 1.381966011250105d)) // 41
+            .withBondTo(31, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, 1.618033988749895d, 5.0d)) // 42
+            .withBondTo(32, BondType.DOUBLE)
+            .withBondTo(40, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.381966011250105d, 2.854101966249685d, 4.23606797749979d)) // 43
+            .withBondTo(33, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.0d, 3.23606797749979d, 3.23606797749979d)) // 44
+            .withBondTo(34, BondType.DOUBLE)
+            .withBondTo(43, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.854101966249684d, 4.854101966249685d, 1.0d)) // 45
+            .withBondTo(35, BondType.DOUBLE)
+            .withBondTo(41, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.618033988749895d, 4.854101966249685d, 1.0d)) // 46
+            .withBondTo(36, BondType.SINGLE)
+            .withBondTo(37, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 4.23606797749979d, 2.618033988749895d)) // 47
+            .withBondTo(37, BondType.SINGLE)
+            .withBondTo(44, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3.23606797749979d, 3.23606797749979d, 3.23606797749979d)) // 48
+            .withBondTo(38, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.618033988749895d, 2.854101966249685d, 4.23606797749979d)) // 49
+            .withBondTo(39, BondType.DOUBLE)
+            .withBondTo(48, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2.854101966249685d, 4.23606797749979d, 2.618033988749895d)) // 50
+            .withBondTo(41, BondType.DOUBLE)
+            .withBondTo(48, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, 2.854101966249685d, 5.0d)) // 51
+            .withBondTo(42, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 3.47213595499958d, 4.618033988749895d)) // 52
+            .withBondTo(43, BondType.DOUBLE)
+            .withBondTo(51, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, 5.23606797749979d, 2.0d)) // 53
+            .withBondTo(45, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.0d, 5.23606797749979d, 2.0d)) // 54
+            .withBondTo(46, BondType.DOUBLE)
+            .withBondTo(53, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.618033988749895d, 4.854101966249685d, 3.0d)) // 55
+            .withBondTo(47, BondType.DOUBLE)
+            .withBondTo(54, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.618033988749895d, 3.47213595499958d, 4.618033988749895d)) // 56
+            .withBondTo(49, BondType.SINGLE)
+            .withBondTo(51, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.854101966249684d, 4.854101966249685d, 3.0d)) // 57
+            .withBondTo(50, BondType.SINGLE)
+            .withBondTo(53, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.0d, 4.47213595499958d, 4.0d)) // 58
+            .withBondTo(52, BondType.SINGLE)
+            .withBondTo(55, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(1.23606797749979d, 4.47213595499958d, 4.0d)) // 59
+            .withBondTo(56, BondType.SINGLE)
+            .withBondTo(57, BondType.SINGLE)
+            .withBondTo(58, BondType.DOUBLE)
+            .attach()
+            .reflections(new int[][]{
+                    new int[0]
+            }).build("c60_fullerene"),
 
     CYCLOHEXANE = create(LegacyElement.CARBON)
             .sideChain(new Vec3(-sin(30), -cos(30), 0), new Vec3(-sin(30), -cos(30), 0), BondType.SINGLE)
@@ -316,6 +529,50 @@ public class DestroyTopologies {
         .reflections(new int[][]{
             new int[]{1, 0, 5, 4, 3, 2}
         }).build("isohydrobenzofuran"),
+
+    NAPTHALENE = create(LegacyElement.CARBON) // 0
+            .sideChain(new Vec3(-cos(30), -sin(30), 0d), new Vec3(-cos(30), -sin(30), -0.5d))
+            .atom(LegacyElement.CARBON, new Vec3(0d, 1d, 0d)) // 1
+            .withSideBranch(new Vec3(-cos(30), sin(30), 0d), new Vec3(-cos(30), sin(30), 0.5d).normalize())
+            .withBondTo(0, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(cos(30), 1d + sin(30), 0d)) // 2
+            .withSideBranch(new Vec3(0d, 1d, 0d), new Vec3(0d, 1d, -0.5d).normalize())
+            .withBondTo(1, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2 * cos(30), 1d, 0d)) // 3
+            .withBondTo(2, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3 * cos(30), 1d + sin(30), 0d)) // 4
+            .withSideBranch(new Vec3(0d, 1d, 0d), new Vec3(0d, 1d, 0.5d).normalize())
+            .withBondTo(3, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(4 * cos(30), 1d, 0d)) // 5
+            .withSideBranch(new Vec3(cos(30), sin(30), 0d), new Vec3(cos(30), sin(30), 0.5d).normalize())
+            .withBondTo(4, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(4 * cos(30), 0d, 0d)) // 6
+            .withSideBranch(new Vec3(cos(30), -sin(30), 0d), new Vec3(cos(30), -sin(30), -0.5d).normalize())
+            .withBondTo(5, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(3 * cos(30), -sin(30), 0d)) // 7
+            .withSideBranch(new Vec3(0d, -1d, 0d), new Vec3(0d, -1d, -0.5d).normalize())
+            .withBondTo(6, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(2 * cos(30), 0d, 0d)) // 8
+            .withBondTo(7, BondType.AROMATIC)
+            .withBondTo(3, BondType.AROMATIC)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(cos(30), -sin(30), 0d)) // 9
+            .withSideBranch(new Vec3(0d, -1d, 0d), new Vec3(0d, -1d, 0.5d).normalize())
+            .withBondTo(8, BondType.AROMATIC)
+            .withBondTo(0, BondType.AROMATIC)
+            .attach()
+            .reflections(new int[][]{
+                    new int[]{1, 0, 7, 6, 5, 4, 3, 2},
+                    new int[]{5, 4, 3, 2, 1, 0, 7, 6},
+                    new int[]{4, 5, 6, 7, 0, 1, 2, 3}
+            }).build("naphthalene.json"),
 
     OCTASULFUR = create(LegacyElement.SULFUR) // 0
         .atom(LegacyElement.SULFUR, new Vec3(-0.25d, 0.75d, 0.6124d)) // 1

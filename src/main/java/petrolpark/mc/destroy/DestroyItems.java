@@ -1,16 +1,15 @@
 package petrolpark.mc.destroy;
 
-import static petrolpark.mc.destroy.Destroy.REGISTRATE;
-
-import petrolpark.mc.library.PetrolparkTags;
 import com.simibubi.create.AllTags.AllItemTags;
 import com.tterrag.registrate.util.entry.ItemEntry;
-
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.Tags;
 import petrolpark.mc.destroy.config.DestroyAllConfigs;
+import petrolpark.mc.library.PetrolparkTags;
+
+import static petrolpark.mc.destroy.Destroy.REGISTRATE;
 
 /**
  * Destroy's item registry. Entries that depend on custom Item subclasses or block items tied to a
@@ -255,6 +254,11 @@ public class DestroyItems {
             .food(DestroyFoods.BABY_BLUE_POWDER)
         ).tag(Tags.Items.DUSTS)
         .register(),
+    NAPHTHALENE = REGISTRATE.item("naphthalene", Item::new)
+            .register(),
+    PRUSSIAN_BLUE = REGISTRATE.item("prussian_blue", Item::new)
+            .tag(Tags.Items.DUSTS, Tags.Items.DYES, Tags.Items.DYES_BLUE)
+            .register(),
 
     // TOOLS / SIMPLE GEAR
 

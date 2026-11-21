@@ -8,12 +8,13 @@
   - Lecukart reaction
 - Fixed chromium dissolution
 - Chromium (II)
-- Cyclohexane topology
+- Cyclohexane and naphthalene topologies
 - Aging/fermentation takes longer
 - A bunch of more named molecules
 - Added a trigonal bipyramidal molecule geometry
 - Fixed texture UV of elements
 - New elements(so far: barium and bromine)
+- C20 and C60 fullerenes(just for fun!)
 
 Took these from @flynnvali:
 - Corrected the Brown Schlesinger process
@@ -26,9 +27,9 @@ Took these from @flynnvali:
 
 TODO(important but im too lazy):
 - Common precipitation reactions of Ba and Ca
+- More "single-use" intermediates
 - [ ] Carbonic acid/carbonate/bicarbonate mechanisms
 - [ ] Acetone from Calcium acetate thermal decomposition
-- [ ] More "single-use" intermediates
 - [ ] More plastics' uses
 - [ ] Petrochem
   - [ ] Create: Diesel Generators integration
@@ -44,11 +45,13 @@ TODO(important but im too lazy):
 - [ ] Trace metals in ores
 - [ ] Add minor features that were already planned for upstream Destroy (textures already there!)
   - [ ] Sulfur, zirconium and fluorite
-  - [ ] Prussian blue
+  - [x] Prussian blue
+    - Currently no uses
   - [ ] Chalk(calcium carbonate)
   - [ ] Once/Twice distilled moonshine
   - [ ] Soap
   - [ ] Naphthalene
+    - Currently just the compound and item
 - [ ] Split Ostwald process
 - [ ] Replace nonrealistic electrolysis of metals with something else
 - [ ] Add water electrolysis

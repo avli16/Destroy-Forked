@@ -207,7 +207,8 @@ public class DestroyCreativeModeTabs {
                 d("mesh"), d("gas_filter"), d("swiss_army_knife"), d("bucket_and_spade"),
                 d("voltaic_pile"), d("discharged_voltaic_pile"),
                 d("tear_bottle"), d("urine_bottle"), d("yeast"),
-                d("confetti"), d("white_confetti"));
+                d("confetti"), d("white_confetti"), d("prussian_blue"),
+                d("naphthalene"));
 
             CustomTab.Builder builder = new CustomTab.Builder(CreativeModeTab.Row.TOP, 0);
             builder.add(entries.toArray(new ITabEntry[0]));
