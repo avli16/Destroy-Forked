@@ -1,7 +1,7 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import net.minecraft.resources.ResourceLocation;
-import petrolpark.mc.destroy.chemistry.legacy.IonUtil;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyChemistryUtils;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction.ReactionBuilder;
@@ -38,7 +38,7 @@ public abstract class HalideSubstitution extends SingleGroupGenericReaction<Hali
         ReactionBuilder builder = reactionBuilder()
             .addReactant(reactantMolecule)
             .addProduct(productMolecule)
-            .addProduct(IonUtil.getHalideIon(halideGroup.halogen));
+            .addProduct(LegacyChemistryUtils.getHalideIon(halideGroup.halogen));
         LegacySpecies nucleophile = getNucleophile();
         if (nucleophile != null) builder.addReactant(nucleophile, 1, halideGroup.degree == 3 ? 0 : 1);
         transform(builder, halideGroup);

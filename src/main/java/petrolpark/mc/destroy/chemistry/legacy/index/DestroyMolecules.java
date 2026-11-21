@@ -136,6 +136,16 @@ public final class DestroyMolecules {
         .structure(LegacyMolecularStructure.atom(LegacyElement.NITROGEN, 1).addAtom(LegacyElement.HYDROGEN).addAtom(LegacyElement.HYDROGEN).addAtom(LegacyElement.HYDROGEN).addAtom(LegacyElement.HYDROGEN))
         .build(),
 
+    ANILINE = builder()
+            .id("aniline")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:N,,,,"))
+            .boilingPoint(184.13f)
+            .density(1029.7f)
+            .molarHeatCapacity(193.7f)
+            .tag(Tags.CARCINOGEN)
+            .tag(Tags.SMELLY)
+            .build(),
+
     ARGON = builder()
         .id("argon")
         .structure(LegacyMolecularStructure.atom(LegacyElement.ARGON))
@@ -737,6 +747,13 @@ public final class DestroyMolecules {
         .translationKey("organic_chloride")
         .build(),
 
+    GENERIC_DIAZONIUM = builder()
+            .id("generic_diazonium")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:RN^1#N"))
+            .hypothetical()
+            .translationKey("diazonium")
+            .build(),
+
     GENERIC_ESTER = builder()
         .id("generic_ester")
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:RC(=O)OR"))
@@ -1121,6 +1138,24 @@ public final class DestroyMolecules {
         .tag(Tags.ACUTELY_TOXIC)
         .tag(Tags.ACID_RAIN)
         .build(),
+
+    NITRITE = builder()
+            .id("nitrite")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:N~(~O^-0.5)O^-0.5"))
+            .tag(Tags.ACID_RAIN)
+            .build(),
+
+    NITROUS_ACID = builder()
+            .id("nitrous_acid")
+            .structure(LegacyMolecularStructure.atom(LegacyElement.NITROGEN)
+                    .addAtom(LegacyElement.OXYGEN, BondType.DOUBLE)
+                    .addGroup(LegacyMolecularStructure.atom(LegacyElement.OXYGEN)
+                            .addAtom(LegacyElement.HYDROGEN)
+                    )
+            )
+            .tag(Tags.ACUTELY_TOXIC)
+            .tag(Tags.ACID_RAIN)
+            .build(),
 
     NITROGEN = builder()
         .id("nitrogen")

@@ -11,6 +11,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.group.BorateEsterGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.BoricAcidGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.CarbonylGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.CarboxylicAcidGroup;
+import petrolpark.mc.destroy.chemistry.legacy.index.group.DiazoniumGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.EsterGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.HalideGroup;
 import petrolpark.mc.destroy.chemistry.legacy.index.group.IsocyanateGroup;
@@ -38,6 +39,7 @@ public class DestroyGroupTypes {
     public static final LegacyFunctionalGroupType<BoricAcidGroup> BORIC_ACID = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_ORGANIC_BORIC_ACID);
     public static final LegacyFunctionalGroupType<CarbonylGroup> CARBONYL = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_CARBONYL);
     public static final LegacyFunctionalGroupType<CarboxylicAcidGroup> CARBOXYLIC_ACID = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_CARBOXYLIC_ACID);
+    public static final LegacyFunctionalGroupType<DiazoniumGroup> DIAZONIUM = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_DIAZONIUM);
     public static final LegacyFunctionalGroupType<EsterGroup> ESTER = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_ESTER);
     public static final LegacyFunctionalGroupType<HalideGroup> HALIDE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_CHLORIDE);
     public static final LegacyFunctionalGroupType<IsocyanateGroup> ISOCYANATE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_ISOCYANATE);
@@ -50,6 +52,7 @@ public class DestroyGroupTypes {
     public static final LegacyFunctionalGroupType<UnsubstitutedAmideGroup> UNSUBSTITUTED_AMIDE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_AMIDE);
 
     static { // sorry...
+        LegacyFunctionalGroup.groupTypesAndReactions.putIfAbsent(DIAZONIUM, new HashSet<>());
         LegacyFunctionalGroup.groupTypesAndReactions.putIfAbsent(OXIME, new HashSet<>());
     }
 };

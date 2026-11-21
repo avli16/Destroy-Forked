@@ -18,6 +18,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAc
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAcidReduction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanamideAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanideNucleophilicAddition;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.Diazotization;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorohydrination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicHydrochlorination;
@@ -78,6 +79,7 @@ public class DestroyGenericReactions {
     public static final CyanamideAddition CYANAMIDE_ADDITION = new CyanamideAddition();
     public static final CarboxylicAcidEsterification CARBOXYLIC_ACID_ESTERIFICATION = new CarboxylicAcidEsterification();
     public static final CyanideNucleophilicAddition CYANIDE_NUCLEOPHILIC_ADDITION = new CyanideNucleophilicAddition();
+    public static final Diazotization DIAZOTIZATION = new Diazotization();
     public static final HalideAmineSubstitution HALIDE_AMINE_SUBSTITUION = new HalideAmineSubstitution();
     public static final HalideAmmoniaSubstitution HALIDE_AMMONIA_SUBSTITUTION = new HalideAmmoniaSubstitution();
     public static final HalideCyanideSubstitution HALIDE_CYANIDE_SUBSTITUTION = new HalideCyanideSubstitution();

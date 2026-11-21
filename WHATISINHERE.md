@@ -5,9 +5,9 @@
     - Oxime hydrogenation
     - Oxime hydrolysis
     - Nitro group reduction to oxime
-  - Lecukart reaction
+  - Lecukart reaction (will probably get expanded)
+  - Diazotization (WIP)
 - Fixed chromium dissolution
-- Chromium (II)
 - Cyclohexane and naphthalene topologies
 - Aging/fermentation takes longer
 - A bunch of more named molecules
@@ -28,7 +28,8 @@ Took these from @flynnvali:
 TODO(important but im too lazy):
 - Common precipitation reactions of Ba and Ca
 - More "single-use" intermediates
-- [ ] Carbonic acid/carbonate/bicarbonate mechanisms
+- [ ] Nitrous acid disproportionation
+- [ ] Carbonic acid/carbonate/bicarbonate mechanisms (disproportionation etc)
 - [ ] Acetone from Calcium acetate thermal decomposition
 - [ ] More plastics' uses
 - [ ] Petrochem

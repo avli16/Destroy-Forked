@@ -1,7 +1,7 @@
 package petrolpark.mc.destroy.chemistry.legacy.index.genericreaction;
 
 import petrolpark.mc.destroy.Destroy;
-import petrolpark.mc.destroy.chemistry.legacy.IonUtil;
+import petrolpark.mc.destroy.chemistry.legacy.LegacyChemistryUtils;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyBond.BondType;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyMolecularStructure;
 import petrolpark.mc.destroy.chemistry.legacy.LegacyReaction;
@@ -46,7 +46,7 @@ public class HalideAmineSubstitution extends DoubleGroupGenericReaction<HalideGr
             .addReactant(firstReactant.getMolecule())
             .addReactant(secondReactant.getMolecule(), 1, 2)
             .addProduct(substitutedAmine)
-            .addProduct(IonUtil.getHalideIon(halideGroup.halogen))
+            .addProduct(LegacyChemistryUtils.getHalideIon(halideGroup.halogen))
             .addProduct(DestroyMolecules.PROTON)
             // TODO kinetics
             .build();

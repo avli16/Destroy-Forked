@@ -3,7 +3,10 @@ package petrolpark.mc.destroy.chemistry.legacy;
 import petrolpark.mc.destroy.chemistry.legacy.genericreaction.GenericReaction;
 import petrolpark.mc.destroy.chemistry.legacy.index.DestroyMolecules;
 
-public class IonUtil {
+import java.util.List;
+import java.util.Map;
+
+public class LegacyChemistryUtils {
     public static LegacySpecies getHalideIon(LegacyAtom atom) {
         LegacyElement el = atom.getElement();
         if (el == LegacyElement.FLUORINE) return DestroyMolecules.FLUORIDE;
@@ -11,5 +14,13 @@ public class IonUtil {
         if (el == LegacyElement.BROMINE) return DestroyMolecules.BROMIDE;
         if (el == LegacyElement.IODINE) return DestroyMolecules.IODIDE;
         throw new GenericReaction.GenericReactionGenerationException(el.toString() + " is not a halogen.");
+    }
+
+    public static boolean isAromatic(Map<LegacyAtom, List<LegacyBond>> structure, LegacyAtom atom) {
+        for (LegacyBond bond : structure.get(atom)) {
+            if (bond.getType() == LegacyBond.BondType.AROMATIC) return true;
+        }
+
+        return false;
     }
 }
