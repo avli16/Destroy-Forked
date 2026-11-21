@@ -34,8 +34,11 @@ TODO(important but im too lazy):
   - [ ] Create: Diesel Generators integration
   - [ ] Bitumen from oil distillation
   - Claus process
+- [ ] Silicon
 - [ ] Monazite sands
+  - [ ] Elements
 - [ ] Granite leachate
+- [ ] Quartz processing
 - [ ] Piss -aging-> hydrolyzed piss -heating-> ammonia gas -absorption-> NH4OH
   - [x] Hydrolyzed piss
 - [ ] Trace metals in ores
@@ -84,5 +87,6 @@ TODO(less important):
 - [ ] PtCl2 and its use for cisplatin
 - [ ] Phenoxide in Kolbe Schmitt reaction
 - [ ] Induction heater allowing for precise temperature control
+- [ ] Cyclopentanone synthesis from adipic acid and barium catalyst
 
 No AI use btw!

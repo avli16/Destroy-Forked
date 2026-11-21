@@ -84,6 +84,79 @@ public class DestroyTopologies {
         // TODO reflections
         .build("cubane"),
 
+    C20_FULLERENE = create(LegacyElement.CARBON) // 0
+            .atom(LegacyElement.CARBON, new Vec3(-1d, -0.381966011250105d, 0.618033988749895d)) // 1
+            .withBondTo(0, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, 0.618033988749895d, -1d)) // 2
+            .withBondTo(0, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, -1d, -0.381966011250105d)) // 3
+            .withBondTo(0, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2d, 0d, 0d)) // 4
+            .withBondTo(1, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1d, -1.618033988749895d, 0.618033988749895d)) // 5
+            .withBondTo(1, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0d, 0d, -2d)) // 6
+            .withBondTo(2, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, 0.618033988749895d, -1d)) // 7
+            .withBondTo(2, BondType.DOUBLE)
+            .withBondTo(4, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0d, -2d, 0d)) // 8
+            .withBondTo(3, BondType.SINGLE)
+            .withBondTo(5, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0.618033988749895d, -1d, -1.618033988749895d)) // 9
+            .withBondTo(3, BondType.SINGLE)
+            .withBondTo(6, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.618033988749895d, -1d, -0.381966011250105d)) // 10
+            .withBondTo(4, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2d, -2d, 0d)) // 11
+            .withBondTo(5, BondType.SINGLE)
+            .withBondTo(10, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1d, -0.381966011250105d, -2.618033988749895d)) // 12
+            .withBondTo(6, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2d, 0d, -2d)) // 13
+            .withBondTo(7, BondType.SINGLE)
+            .withBondTo(12, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-0.381966011250105d, -2.618033988749895d, -1d)) // 14
+            .withBondTo(8, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(0d, -2d, -2d)) // 15
+            .withBondTo(9, BondType.SINGLE)
+            .withBondTo(14, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2.618033988749895d, -1d, -1.618033988749895d)) // 16
+            .withBondTo(10, BondType.SINGLE)
+            .withBondTo(13, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1.618033988749895d, -2.618033988749895d, -1d)) // 17
+            .withBondTo(11, BondType.DOUBLE)
+            .withBondTo(14, BondType.SINGLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-1d, -1.618033988749895d, -2.618033988749895d)) // 18
+            .withBondTo(12, BondType.SINGLE)
+            .withBondTo(15, BondType.DOUBLE)
+            .attach()
+            .atom(LegacyElement.CARBON, new Vec3(-2d, -2d, -2d)) // 19
+            .withBondTo(16, BondType.DOUBLE)
+            .withBondTo(17, BondType.SINGLE)
+            .withBondTo(18, BondType.SINGLE)
+            .attach()
+            .reflections(new int[][]{
+                    new int[0]
+            }).build("c20_fullerene"),
+
     CYCLOHEXANE = create(LegacyElement.CARBON)
             .sideChain(new Vec3(-sin(30), -cos(30), 0), new Vec3(-sin(30), -cos(30), 0), BondType.SINGLE)
             .sideChain(new Vec3(-sin(30), -cos(30), 0.5d).normalize(), new Vec3(-sin(30), -cos(30), 0.5d).normalize(), BondType.SINGLE)
@@ -159,9 +232,9 @@ public class DestroyTopologies {
             .withBondTo(3, BondType.SINGLE)
             .withBondTo(0, BondType.DOUBLE)
             .attach()
-        // .reflections(new int[][]{
-        // new int[]{0, 4, 3, 2, 1}
-        // })
+//            .reflections(new int[][]{
+//                new int[]{0, 4, 3, 2, 1}
+//            })
         .build("cyclopentadiene"),
 
     CYCLOPENTADIENIDE = create(LegacyElement.CARBON) // 0

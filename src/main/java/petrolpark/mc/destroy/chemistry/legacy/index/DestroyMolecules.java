@@ -246,6 +246,13 @@ public final class DestroyMolecules {
         .tag(Tags.SMOG)
         .build(),
 
+    C20_FULLERENE = builder()
+            .id("c20_fullerene")
+            .structure(LegacyMolecularStructure.deserialize("destroy:c20_fullerene:,"))
+            // Specific heat capacity unknown
+            .tag(Tags.SMOG)
+            .build(),
+
     CALCIUM_ION = builder()
         .id("calcium_ion")
         .translationKey("calcium")
