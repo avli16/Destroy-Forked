@@ -1,0 +1,71 @@
+{
+  "type": "destroy:distillation",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000,
+      "type": "neoforge:single"
+    }
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "id": "destroy:mixture",
+      "components": {
+        "destroy:mixture": {
+          "TranslationKey": "fluid.destroy.mineral_rich_brine",
+          "Contents": [
+            {
+              "Molecule": "destroy:water",
+              "Concentration": 55.555556
+            },
+            {
+              "Molecule": "destroy:sodium_ion",
+              "Concentration": 0.9
+            },
+            {
+              "Molecule": "destroy:calcium_ion",
+              "Concentration": 0.42
+            },
+            {
+              "Molecule": "destroy:potassium_ion",
+              "Concentration": 0.18
+            },
+            {
+              "Molecule": "destroy:chloride",
+              "Concentration": 1.03
+            },
+            {
+              "Molecule": "destroy:bromide",
+              "Concentration": 0.42
+            },
+            {
+              "Molecule": "destroy:sulfate",
+              "Concentration": 0.005
+            }
+          ]
+        }
+      }
+    },
+    {
+      "amount": 500,
+      "id": "destroy:mixture",
+      "components": {
+        "destroy:mixture": {
+          "TranslationKey": "fluid.destroy.distilled_water",
+          "Contents": [
+            {
+              "Molecule": "destroy:water",
+              "Concentration": 55.555556
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "heat_requirement": "heated",
+  "biomes": [
+    "minecraft:savanna",
+    "minecraft:swamp"
+  ]
+}

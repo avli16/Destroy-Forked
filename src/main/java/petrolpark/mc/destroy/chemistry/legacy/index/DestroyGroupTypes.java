@@ -45,7 +45,7 @@ public class DestroyGroupTypes {
     public static final LegacyFunctionalGroupType<IsocyanateGroup> ISOCYANATE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_ISOCYANATE);
     public static final LegacyFunctionalGroupType<NitrileGroup> NITRILE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_NITRILE);
     public static final LegacyFunctionalGroupType<NitroGroup> NITRO = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_NITRO);
-    public static final LegacyFunctionalGroupType<NonTertiaryAmineGroup> NON_TERTIARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_AMINE);
+    public static final LegacyFunctionalGroupType<NonTertiaryAmineGroup> NON_TERTIARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_AMINE);
     public static final LegacyFunctionalGroupType<NonTertiaryBoraneGroup> NON_TERTIARY_BORANE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_BORANE);
     public static final LegacyFunctionalGroupType<OximeGroup> OXIME = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_OXIME);
     public static final LegacyFunctionalGroupType<PrimaryAmineGroup> PRIMARY_AMINE = new LegacyFunctionalGroupType<>(() -> DestroyMolecules.GENERIC_PRIMARY_AMINE);

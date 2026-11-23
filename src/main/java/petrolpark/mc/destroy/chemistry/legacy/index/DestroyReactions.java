@@ -516,15 +516,16 @@ public class DestroyReactions {
         .build(),
 
     FRANK_CARO_PROCESS = builder()
-        .id("frank_caro_process")
-        .addSimpleItemReactant(DestroyItems.CALCIUM_CARBIDE, 2f)
-        .addReactant(DestroyMolecules.NITROGEN)
-        .addReactant(DestroyMolecules.OXYGEN)
-        .addProduct(DestroyMolecules.CALCIUM_ION)
-        .addProduct(DestroyMolecules.CYANAMIDE_ION)
-        .addProduct(DestroyMolecules.CARBON_DIOXIDE) // TODO make it make soot instead of including oxygen in the reactants
-        .activationEnergy(50f)
-        .build(),
+            .id("frank_caro_process")
+            .addSimpleItemReactant(DestroyItems.CALCIUM_CARBIDE, 2f)
+            .addReactant(DestroyMolecules.NITROGEN)
+            .addReactant(DestroyMolecules.OXYGEN)
+            .addProduct(DestroyMolecules.CALCIUM_ION)
+            .addProduct(DestroyMolecules.CYANAMIDE_ION)
+            .addProduct(DestroyMolecules.CARBON_DIOXIDE) // TODO make it make soot instead of including oxygen in the reactants
+            .activationEnergy(180f)
+            .enthalpyChange(-286.6f) // @ 1100C
+            .build(),
 
     GLYCEROL_NITRATION = builder()
         .id("glycerol_nitration")

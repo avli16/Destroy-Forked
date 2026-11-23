@@ -7,6 +7,7 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlcoholDehyd
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlcoholOxidation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AldehydeOxidation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkoxideProtonation;
+import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkyneDeprotonation;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AlkyneHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AmideHydrolysis;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.AminePhosgenation;
@@ -50,6 +51,7 @@ public class DestroyGenericReactions {
     public static final AlcoholDehydration ALCOHOL_DEHYDRATION = new AlcoholDehydration();
     public static final AlcoholOxidation ALCOHOL_OXIDATION = new AlcoholOxidation();
     public static final AldehydeOxidation ALDEHYDE_OXIDATION = new AldehydeOxidation();
+    public static final AlkyneDeprotonation ALKYNE_DEPROTONATION = new AlkyneDeprotonation();
     public static final ElectrophilicChlorination ALKENE_CHLORINATION = new ElectrophilicChlorination(false);
     public static final ElectrophilicChlorohydrination ALKENE_CHLOROHYDRINATION = new ElectrophilicChlorohydrination(false);
     public static final SaturatedCarbonHydrolysis ALKENE_HYDROLYSIS = new SaturatedCarbonHydrolysis(false);

@@ -16,6 +16,15 @@ public class LegacyChemistryUtils {
         throw new GenericReaction.GenericReactionGenerationException(el.toString() + " is not a halogen.");
     }
 
+    public static LegacySpecies getHalideAcid(LegacyAtom atom) {
+        LegacyElement el = atom.getElement();
+        if (el == LegacyElement.FLUORINE) return DestroyMolecules.HYDROFLUORIC_ACID;
+        if (el == LegacyElement.CHLORINE) return DestroyMolecules.HYDROCHLORIC_ACID;
+        if (el == LegacyElement.BROMINE) return DestroyMolecules.HYDROGEN_BROMIDE;
+        if (el == LegacyElement.IODINE) return DestroyMolecules.HYDROGEN_IODIDE;
+        throw new GenericReaction.GenericReactionGenerationException(el.toString() + " is not a halogen.");
+    }
+
     public static boolean isAromatic(Map<LegacyAtom, List<LegacyBond>> structure, LegacyAtom atom) {
         for (LegacyBond bond : structure.get(atom)) {
             if (bond.getType() == LegacyBond.BondType.AROMATIC) return true;

@@ -146,6 +146,14 @@ public final class DestroyMolecules {
             .tag(Tags.SMELLY)
             .build(),
 
+    ANISOLE = builder()
+            .id("anisole")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:OC,,,,"))
+            .boilingPoint(154.f)
+            .density(995f)
+            .molarHeatCapacity(199.0f)
+            .build(),
+
     ARGON = builder()
         .id("argon")
         .structure(LegacyMolecularStructure.atom(LegacyElement.ARGON))
@@ -921,6 +929,13 @@ public final class DestroyMolecules {
         .structure(LegacyMolecularStructure.deserialize("destroy:linear:O=S(=O)(OH)O^-1"))
         .tag(Tags.ACID_RAIN)
         .build(),
+
+    HYDROGEN_SULFIDE = builder()
+            .id("hydrogen_sulfide")
+            .structure(LegacyMolecularStructure.deserialize("destroy:linear:S"))
+            .tag(Tags.SMELLY)
+            .tag(Tags.ACID_RAIN)
+            .build(),
 
     HYDROXIDE = builder()
         .id("hydroxide")

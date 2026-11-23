@@ -208,10 +208,10 @@ public class DestroyGroupFinder extends GroupFinder {
                     int secondCarbonDegree = bondedAtomsOfElementTo(structure, alkeneCarbon, LegacyElement.CARBON).size() - 1;
                     // If the two Carbons have the same degree, then there are two alkene Groups
                     if (firstCarbonDegree >= secondCarbonDegree) {
-                        groups.add(new AlkeneGroup(carbon, alkeneCarbon));
+                        groups.add(new AlkeneGroup(carbon, alkeneCarbon, true));
                     };
                     if (secondCarbonDegree >= firstCarbonDegree) {
-                        groups.add(new AlkeneGroup(alkeneCarbon, carbon));
+                        groups.add(new AlkeneGroup(alkeneCarbon, carbon, true));
                     };
                     carbonsToIgnoreForAlkenes.add(carbon);
                 };
@@ -221,13 +221,25 @@ public class DestroyGroupFinder extends GroupFinder {
                     if (!carbonsToIgnoreForAlkynes.contains(alkyneCarbon)) {
                         int firstCarbonDegree = bondedAtomsOfElementTo(structure, carbon, LegacyElement.CARBON).size() - 1;
                         int secondCarbonDegree = bondedAtomsOfElementTo(structure, alkyneCarbon, LegacyElement.CARBON).size() - 1;
-                        // If the two Carbons have the same degree, then there are two alkyne Groups
-                        if (firstCarbonDegree >= secondCarbonDegree) {
-                            groups.add(new AlkyneGroup(carbon, alkyneCarbon));
-                        };
-                        if (secondCarbonDegree >= firstCarbonDegree) {
-                            groups.add(new AlkyneGroup(alkyneCarbon, carbon));
-                        };
+                        List<LegacyAtom> firstCarbonBondedToHydrogen = bondedAtomsOfElementTo(structure, carbon, LegacyElement.HYDROGEN);
+                        List<LegacyAtom> secondCarbonBondedToHydrogen = bondedAtomsOfElementTo(structure, alkyneCarbon, LegacyElement.HYDROGEN);
+
+                        if (carbon.formalCharge == 0 && alkyneCarbon.formalCharge == 0 && secondCarbonBondedToHydrogen.size() + firstCarbonBondedToHydrogen.size() == 0) {
+                            // If the two Carbons have the same degree, then there are two alkyne Groups
+                            if (firstCarbonDegree >= secondCarbonDegree) {
+                                groups.add(new AlkyneGroup(carbon, alkyneCarbon, false));
+                            }
+                            if (secondCarbonDegree >= firstCarbonDegree) {
+                                groups.add(new AlkyneGroup(alkyneCarbon, carbon, false));
+                            }
+                        } else if (carbon.formalCharge == 0 && alkyneCarbon.formalCharge == 0 && secondCarbonBondedToHydrogen.size() == 1) {
+                            if (firstCarbonDegree >= secondCarbonDegree) {
+                                groups.add(new AlkyneGroup(carbon, alkyneCarbon, true));
+                            }
+                            if (secondCarbonDegree >= firstCarbonDegree) {
+                                groups.add(new AlkyneGroup(alkyneCarbon, carbon, false));
+                            }
+                        }
                         carbonsToIgnoreForAlkynes.add(carbon);
                         carbonsToIgnoreForAlkynes.add(alkyneCarbon); // This will only ever be in one alkyne group so we can ignore it the second time
                     };

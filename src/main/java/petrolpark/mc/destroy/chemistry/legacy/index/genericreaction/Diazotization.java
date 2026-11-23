@@ -22,7 +22,7 @@ public class Diazotization extends SingleGroupGenericReaction<PrimaryAmineGroup>
 
     @Override
     public LegacyReaction generateReaction(GenericReactant<PrimaryAmineGroup> reactant) {
-        return null; // TODO: currently crashes
+        return null; // FIXME: currently crashes
 
 //        LegacyMolecularStructure structure = reactant.molecule.shallowCopyStructure();
 //        structure.moveTo(reactant.group.carbon)

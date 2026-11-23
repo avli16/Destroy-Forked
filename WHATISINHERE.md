@@ -75,7 +75,7 @@ TODO(less important):
 - [ ] NaK
 - [ ] Calcium sulfate
 - [ ] Alkyne deprotonation
-- [ ] Anisole
+- [x] Anisole
 - [ ] Phosphorus pentasulfide
 - [ ] Lawesson's reagent
 - [ ] Thionation reactions (P4O10 = bad yield/bad whatever)
