@@ -19,6 +19,8 @@ public class AlkoxideProtonation extends SingleGroupGenericReaction<AlkoxideGrou
     @Override
     public LegacyReaction generateReaction(GenericReactant<AlkoxideGroup> reactant) {
         LegacyMolecularStructure structure = reactant.getMolecule().shallowCopyStructure();
+        if (reactant.molecule == DestroyMolecules.PHENOXIDE) // Because it was crashing, I don't know why.
+            return null;
         structure.moveTo(reactant.group.carbon)
             .remove(reactant.group.oxygen)
             .addGroup(LegacyMolecularStructure.alcohol());

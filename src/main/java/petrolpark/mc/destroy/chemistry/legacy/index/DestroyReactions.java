@@ -686,11 +686,12 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.IODIDE)
         .build(),
 
+    // TODO: split into the actual reaction and acidification. This will require to create both salicylate and salicylate dianion
     KOLBE_SCHMITT_REACTION = builder()
         .id("kolbe_schmitt_reaction")
         .addReactant(DestroyMolecules.CARBON_DIOXIDE)
         .addReactant(DestroyMolecules.PHENOL)
-        .addCatalyst(DestroyMolecules.SODIUM_ION, 1) // TODO actually add sodium phenoxide intermediate
+        .addCatalyst(DestroyMolecules.SODIUM_ION, 1)
         .addCatalyst(DestroyMolecules.PROTON, 1)
         .addProduct(DestroyMolecules.SALICYLIC_ACID)
         .build(),
@@ -860,8 +861,6 @@ public class DestroyReactions {
         .addProduct(DestroyMolecules.NITRIC_ACID)
         .withResult(0f, DestroyAdvancementTrigger.OSTWALD_PROCESS::asReactionResult)
         .build(), // TODO potentially split into multiple equations, and add side reactions
-
-    // TODO some other phenylacetic acid synthesis
 
     PARAXYLENE_TRANSALKYLATION = builder()
         .id("paraxylene_transalkylation")
@@ -1218,6 +1217,7 @@ public class DestroyReactions {
         builder().acid(DestroyMolecules.ACETIC_ACID, DestroyMolecules.ACETATE, 4.76f);
         builder().acid(DestroyMolecules.AMMONIUM, DestroyMolecules.AMMONIA, 9.25f);
         builder().acid(DestroyMolecules.CHLOROACETIC_ACID, DestroyMolecules.CHLOROACETATE, 2.86f);
+        builder().acid(DestroyMolecules.ETHANOL, DestroyMolecules.ETHOXIDE, 15.9f);
         builder().acid(DestroyMolecules.FORMIC_ACID, DestroyMolecules.FORMATE, 3.75f);
         builder().acid(DestroyMolecules.HYDROGEN_BROMIDE, DestroyMolecules.BROMIDE, -9.f);
         builder().acid(DestroyMolecules.HYDROCHLORIC_ACID, DestroyMolecules.CHLORIDE, -6.3f);
@@ -1229,6 +1229,8 @@ public class DestroyReactions {
         builder().acid(DestroyMolecules.HYPOCHLOROUS_ACID, DestroyMolecules.HYPOCHLORITE, 7.53f);
         builder().acid(DestroyMolecules.NITRIC_ACID, DestroyMolecules.NITRATE, -1.3f);
         builder().acid(DestroyMolecules.NITROUS_ACID, DestroyMolecules.NITRITE, 3.16f);
+        builder().acid(DestroyMolecules.METHANOL, DestroyMolecules.METHOXIDE, 15.5f);
+        builder().acid(DestroyMolecules.PHENOL, DestroyMolecules.PHENOXIDE, 10.f);
         builder().acid(DestroyMolecules.PHENYLACETIC_ACID, DestroyMolecules.PHENYLACETATE, 4.31f);
         builder().acid(DestroyMolecules.SULFURIC_ACID, DestroyMolecules.HYDROGENSULFATE, -2.18f);
     };

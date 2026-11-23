@@ -19,7 +19,6 @@ import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAc
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CarboxylicAcidReduction;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanamideAddition;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.CyanideNucleophilicAddition;
-import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.Diazotization;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicChlorohydrination;
 import petrolpark.mc.destroy.chemistry.legacy.index.genericreaction.ElectrophilicHydrochlorination;
@@ -61,7 +60,7 @@ public class DestroyGenericReactions {
     public static final SaturatedCarbonHydrogenation ALKENE_HYDROGENATION = new SaturatedCarbonHydrogenation(false);
     public static final ElectrophilicHydroiodination ALKENE_HYDROIODINATION = new ElectrophilicHydroiodination(false);
     public static final ElectrophilicIodination ALKENE_IODINATION = new ElectrophilicIodination(false);
-    public static final AlkoxideProtonation ALKOXIDE_PROTONATION = new AlkoxideProtonation();
+    public static final AlkoxideProtonation ALKOXIDE_PROTONATION = new AlkoxideProtonation(); // why is this even in the mod if there was no way to make alkoxide?
     public static final ElectrophilicChlorination ALKYNE_CHLORINATION = new ElectrophilicChlorination(true);
     public static final ElectrophilicChlorohydrination ALKYNE_CHLOROHYDRINATION = new ElectrophilicChlorohydrination(true);
     public static final AlkyneHydrolysis ALKYNE_HYDROLYSIS = new AlkyneHydrolysis();
@@ -81,7 +80,7 @@ public class DestroyGenericReactions {
     public static final CyanamideAddition CYANAMIDE_ADDITION = new CyanamideAddition();
     public static final CarboxylicAcidEsterification CARBOXYLIC_ACID_ESTERIFICATION = new CarboxylicAcidEsterification();
     public static final CyanideNucleophilicAddition CYANIDE_NUCLEOPHILIC_ADDITION = new CyanideNucleophilicAddition();
-    public static final Diazotization DIAZOTIZATION = new Diazotization();
+    // public static final Diazotization DIAZOTIZATION = new Diazotization(); // Crashes
     public static final HalideAmineSubstitution HALIDE_AMINE_SUBSTITUION = new HalideAmineSubstitution();
     public static final HalideAmmoniaSubstitution HALIDE_AMMONIA_SUBSTITUTION = new HalideAmmoniaSubstitution();
     public static final HalideCyanideSubstitution HALIDE_CYANIDE_SUBSTITUTION = new HalideCyanideSubstitution();

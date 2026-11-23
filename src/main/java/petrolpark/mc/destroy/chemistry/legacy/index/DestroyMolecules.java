@@ -1276,6 +1276,11 @@ public final class DestroyMolecules {
         .tag(Tags.SMOG)
         .build(),
 
+    PHENOXIDE = builder()
+            .id("phenoxide")
+            .structure(LegacyMolecularStructure.deserialize("destroy:benzene:O^-1"))
+            .build(),
+
     PHENYLACETATE = builder()
             .id("phenylacetate")
             .structure(LegacyMolecularStructure.deserialize("destroy:benzene:CC~(~O^-0.5)O^-0.5"))
